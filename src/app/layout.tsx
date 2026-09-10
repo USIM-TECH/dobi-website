@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: "Laundry & Dry Cleaning Services | Dobi Akasia",
   },
   description: "Dobi Akasia is Malaysia's tech-driven laundry and dry cleaning provider. We blend our rich experience with innovative green cleaning technology.",
-  keywords: ["laundry", "dry cleaning", "dobi", "dobi akasia", "curtain cleaning", "carpet cleaning", "shoe cleaning", "malaysia laundry"],
+  keywords: ["laundry", "dry cleaning", "dobi", "dobi akasia", "curtain cleaning", "carpet cleaning", "malaysia laundry"],
   openGraph: {
     title: "Laundry & Dry Cleaning Services | Dobi Akasia",
     description: "Dobi Akasia is Malaysia's tech-driven laundry and dry cleaning provider. We blend our rich experience with innovative green cleaning technology.",

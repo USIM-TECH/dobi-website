@@ -71,7 +71,7 @@ export default function SpecialCarePage() {
               <span className="text-sm font-semibold text-gray-600 bg-gray-100/80 border border-gray-200/60 px-4 py-2 rounded-full">
                 Price: <strong className="text-primary font-semibold">{startPrice}</strong>
               </span>
-              <Button href="https://wa.me/60192225745" variant="lime">
+              <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="lime">
                 WhatsApp Us
               </Button>
             </div>
@@ -188,7 +188,7 @@ export default function SpecialCarePage() {
             Drop off your items at any outlet, or text us via WhatsApp to arrange a professional pickup.
           </p>
           <div className="flex justify-center gap-4">
-            <Button href="https://wa.me/60192225745" variant="white">
+            <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="white">
               WhatsApp Us Now
             </Button>
             <Button href="/en/service-centres" variant="outline-white">

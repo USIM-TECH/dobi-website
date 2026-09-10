@@ -11,6 +11,8 @@ interface ButtonProps {
   onClick?: () => void;
   variant?: "primary" | "secondary" | "lime" | "outline" | "white" | "outline-white";
   className?: string;
+  target?: string;
+  rel?: string;
 }
 
 export default function Button({
@@ -19,6 +21,8 @@ export default function Button({
   onClick,
   variant = "primary",
   className = "",
+  target,
+  rel,
 }: ButtonProps) {
   const baseStyles =
     "inline-flex items-center justify-between gap-3 px-6 py-3.5 rounded-full font-bold text-sm transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none cursor-pointer select-none active:scale-[0.98] group";
@@ -47,7 +51,7 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href} className={`${baseStyles} ${variants[variant]} ${className}`}>
+      <Link href={href} target={target} rel={rel} className={`${baseStyles} ${variants[variant]} ${className}`}>
         {content}
       </Link>
     );

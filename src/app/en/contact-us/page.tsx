@@ -51,7 +51,7 @@ export default function ContactPage() {
               <div>
                 <h4 className="font-extrabold text-dark-blue text-sm uppercase tracking-wider mb-1">Headquarters Address</h4>
                 <p className="text-gray-500 text-sm leading-relaxed">
-                  81, Jalan 10/91, Taman Shamelin Perkasa, 56100 Cheras, Wilayah Persekutuan Kuala Lumpur
+                  B8-G, Ground Floor, Acacia Avenue, Jalan Jati 9, 71800 Nilai, Negeri Sembilan
                 </p>
               </div>
             </div>
@@ -63,7 +63,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="font-extrabold text-dark-blue text-sm uppercase tracking-wider mb-1">Email Address</h4>
-                <p className="text-gray-500 text-sm font-semibold">info@dobiakasia.my</p>
+                <p className="text-gray-500 text-sm font-semibold">dobiakasia@gmail.com</p>
               </div>
             </div>
 
@@ -74,7 +74,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="font-extrabold text-dark-blue text-sm uppercase tracking-wider mb-1">Telephone Contact</h4>
-                <p className="text-gray-500 text-sm font-semibold">03-9282 5745</p>
+                <p className="text-gray-500 text-sm font-semibold">011-3140 4946 / 016-440 4636</p>
               </div>
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function ContactPage() {
             Skip the forms! Talk directly to our customer support executives via WhatsApp for immediate bookings or quick quotations.
           </p>
           <div className="pt-2">
-            <Button href="https://wa.me/60192225745" variant="lime">
+            <Button href="https://wa.me/601131404946" variant="lime" target="_blank" rel="noopener noreferrer">
               WhatsApp Support
             </Button>
           </div>

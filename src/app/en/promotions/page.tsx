@@ -26,33 +26,6 @@ export default function PromotionsPage() {
       iconColor: "text-lime",
       bgLight: "bg-lime/5",
     },
-    {
-      title: "Baby Gear Cleaning Combos",
-      desc: "Mix and match any 2 baby items for RM149, or any 3 items for RM199. Includes strollers, cots, carriers, and baby rockers.",
-      terms: ["2 Items for RM149 (Save up to RM51)", "3 Items for RM199 (Save up to RM101)", "Single items priced at RM100"],
-      badge: "Stroller Bundle",
-      color: "border-orange",
-      iconColor: "text-orange",
-      bgLight: "bg-orange/5",
-    },
-    {
-      title: "Luggage Cleaning Bundle",
-      desc: "Keep your suitcases clean before and after holidays. Clean luggage bodies, handles, and wheels manually.",
-      terms: ["2 Luggages for RM119", "3 Luggages for RM159", "Single luggage at RM60 (Save up to RM21)"],
-      badge: "Travel Special",
-      color: "border-primary-dark",
-      iconColor: "text-primary-dark",
-      bgLight: "bg-primary-dark/5",
-    },
-    {
-      title: "Soft Toys Combo Special",
-      desc: "Sanitize your kids' plushies to ensure a hygienic playtime. Standard individual toy cleaning is RM15.",
-      terms: ["3 Toys Combo: RM39", "5 Toys Combo: RM59 (Save up to RM16)", "Applies to soft toys up to 50cm height"],
-      badge: "Kids & Toys",
-      color: "border-purple-500",
-      iconColor: "text-purple-500",
-      bgLight: "bg-purple-500/5",
-    },
   ];
 
   return (
@@ -110,7 +83,7 @@ export default function PromotionsPage() {
               </div>
 
               <div className="pt-8 flex gap-4">
-                <Button href="https://wa.me/60192225745" variant="primary" className="flex-grow justify-center">
+                <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="primary" className="flex-grow justify-center">
                   Claim Promotion
                 </Button>
               </div>

@@ -69,7 +69,7 @@ export default function TrainingPage() {
               Unlock the skills needed to succeed in the retail and commercial laundry industry. We offer claimable training programs inside an operating laundry facility.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Button href="https://wa.me/60192225745" variant="primary">
+              <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="primary">
                 Register via WhatsApp
               </Button>
             </div>
@@ -156,7 +156,7 @@ export default function TrainingPage() {
                 </div>
               </div>
               <div className="pt-8">
-                <Button href="https://wa.me/60192225745" variant="primary" className="w-full justify-center">
+                <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="primary" className="w-full justify-center">
                   Book Masterclass
                 </Button>
               </div>
@@ -183,7 +183,7 @@ export default function TrainingPage() {
                 </div>
               </div>
               <div className="pt-8">
-                <Button href="https://wa.me/60192225745" variant="lime" className="w-full justify-center">
+                <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="lime" className="w-full justify-center">
                   Book Professional Program
                 </Button>
               </div>

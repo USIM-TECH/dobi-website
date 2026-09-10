@@ -4,14 +4,13 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Globe, MessageCircle, MapPin, Clock, Phone, Mail } from "lucide-react";
+import { Menu, X, ChevronDown, MessageCircle, MapPin, Clock, Phone, Mail } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [langMenuOpen, setLangMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const pathname = usePathname();
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -67,18 +66,6 @@ export default function Navbar() {
     { name: "Special Care", href: "/en/special-care" },
     { name: "Bedding Cleaning", href: "/en/bedding-cleaning" },
     { name: "Ironing", href: "/en/ironing" },
-    { name: "Shoe Cleaning", href: "/en/shoe-cleaning" },
-    { name: "Toy Cleaning", href: "/en/toy-cleaning" },
-    { name: "Baby Stroller & Car Seat Cleaning", href: "/en/baby-stroller-car-seat-cleaning" },
-    { name: "Luggage Cleaning", href: "/en/luggage-cleaning" },
-    { name: "Wedding Gown Cleaning", href: "/en/wedding-gown-cleaning" },
-    { name: "Stain Removal", href: "/en/stain-removal" },
-  ];
-
-  const forBusiness = [
-    { name: "Commercial Laundry", href: "/en/commercial-laundry" },
-    { name: "Franchise Opportunity", href: "/en/franchise" },
-    { name: "Academy & Training", href: "/en/training" },
   ];
 
   const sidebarVariants = {
@@ -104,14 +91,9 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-3">
           {/* Logo */}
           <Link href="/en" className="flex min-w-0 items-center gap-3 group">
-            <div className="flex flex-col leading-none">
-              <span className="font-extrabold text-2xl tracking-tight text-[#152956] group-hover:opacity-90 transition-opacity">
-                Dobi<span className="text-[#1d6ff0]">Akasia</span>
-              </span>
-              <span className="text-[9px] font-bold tracking-widest text-[#9ac936] uppercase mt-0.5">
-                Green Certified Laundry
-              </span>
-            </div>
+            <span className="font-extrabold text-2xl tracking-tight text-[#152956] group-hover:opacity-90 transition-opacity">
+              Dobi<span className="text-[#1d6ff0]">Akasia</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -174,55 +156,6 @@ export default function Navbar() {
               Promotions
             </Link>
 
-            {/* Business Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => handleMouseEnter("business")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button
-                type="button"
-                onClick={() => setActiveDropdown(activeDropdown === "business" ? null : "business")}
-                aria-expanded={activeDropdown === "business"}
-                aria-haspopup="menu"
-                className="flex items-center gap-1.5 rounded-full px-3.5 py-2 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#1d6ff0] transition-all cursor-pointer"
-              >
-                <span>For Business</span>
-                <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${activeDropdown === "business" ? "rotate-180 text-[#1d6ff0]" : ""}`} />
-              </button>
-              <AnimatePresence>
-                {activeDropdown === "business" && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 6, scale: 0.97 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 4, scale: 0.97 }}
-                    transition={{ duration: 0.15, ease: "easeOut" }}
-                    className="absolute left-0 top-full pt-2 z-50 w-56"
-                  >
-                    <div className="rounded-2xl border border-slate-100 bg-white p-2.5 shadow-2xl">
-                      {forBusiness.map((item, idx) => (
-                        <Link
-                          key={idx}
-                          href={item.href}
-                          onClick={() => setActiveDropdown(null)}
-                          className="block rounded-xl px-3.5 py-2 text-xs font-bold text-slate-600 hover:bg-brand-50 hover:text-[#1d6ff0] transition-colors"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            <Link
-              href="/en/service-centres"
-              className="rounded-full px-3.5 py-2 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#1d6ff0] transition-all"
-            >
-              Outlets
-            </Link>
-
             <Link
               href="/en/testimonial"
               className="rounded-full px-3.5 py-2 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#1d6ff0] transition-all"
@@ -240,45 +173,10 @@ export default function Navbar() {
 
           {/* Right Area Action Items */}
           <div className="flex shrink-0 items-center gap-2 lg:gap-3">
-            {/* Language Switcher Dropdown */}
-            <div className="relative hidden lg:block">
-              <button
-                type="button"
-                onClick={() => setLangMenuOpen(!langMenuOpen)}
-                className="flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-2 text-xs font-bold text-slate-700 transition-all hover:border-brand-300 hover:bg-brand-50 hover:text-[#1d6ff0] shadow-2xs cursor-pointer"
-              >
-                <Globe className="w-4 h-4 text-[#1d6ff0]" />
-                <span>EN</span>
-                <ChevronDown className={`w-3.5 h-3.5 text-gray-400 transition-transform duration-200 ${langMenuOpen ? 'rotate-180' : ''}`} />
-              </button>
-
-              {langMenuOpen && (
-                <>
-                  <div className="fixed inset-0 z-10" onClick={() => setLangMenuOpen(false)} />
-                  <div className="absolute right-0 mt-2 z-20 w-44 rounded-2xl border border-slate-100 bg-white p-2 shadow-xl">
-                    <button
-                      type="button"
-                      onClick={() => setLangMenuOpen(false)}
-                      className="flex w-full items-center justify-between rounded-xl bg-brand-50 px-3.5 py-2 text-xs font-bold text-brand-700"
-                    >
-                      <span>English</span>
-                      <span>✓</span>
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setLangMenuOpen(false)}
-                      className="flex w-full items-center justify-between rounded-xl px-3.5 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-50"
-                    >
-                      <span>Bahasa Malaysia</span>
-                    </button>
-                  </div>
-                </>
-              )}
-            </div>
 
             {/* Direct Header WhatsApp CTA */}
             <a
-              href="https://wa.me/60192225745"
+              href="https://wa.me/601131404946"
               target="_blank"
               rel="noreferrer"
               className="hidden items-center gap-2 rounded-full bg-[#1d6ff0] hover:bg-[#1255cc] px-5 py-2.5 text-xs font-bold text-white shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 lg:inline-flex"
@@ -375,49 +273,6 @@ export default function Navbar() {
                   Promotions
                 </Link>
 
-                {/* Business Dropdown in Drawer */}
-                <div className="border-b border-slate-100 pb-2">
-                  <button
-                    onClick={() => toggleAccordion("business")}
-                    className="w-full flex items-center justify-between text-lg font-bold text-[#152956] hover:text-[#1d6ff0] transition-colors py-2 text-left focus:outline-none cursor-pointer"
-                  >
-                    <span>For Business</span>
-                    <ChevronDown
-                      className={`w-5 h-5 transition-transform duration-300 ${
-                        activeAccordion === "business" ? "rotate-180 text-[#1d6ff0]" : "text-gray-400"
-                      }`}
-                    />
-                  </button>
-                  <AnimatePresence initial={false}>
-                    {activeAccordion === "business" && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.25 }}
-                        className="overflow-hidden bg-slate-50 rounded-2xl my-2 px-4 py-2 space-y-1 border border-slate-100"
-                      >
-                        {forBusiness.map((item, index) => (
-                          <Link
-                            key={index}
-                            href={item.href}
-                            className="block py-1.5 text-xs font-bold text-slate-600 hover:text-[#1d6ff0] transition-colors"
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                <Link
-                  href="/en/service-centres"
-                  className="block text-lg font-bold text-[#152956] hover:text-[#1d6ff0] transition-colors py-2 border-b border-slate-100"
-                >
-                  Our Outlets
-                </Link>
-
                 <Link
                   href="/en/testimonial"
                   className="block text-lg font-bold text-[#152956] hover:text-[#1d6ff0] transition-colors py-2 border-b border-slate-100"
@@ -437,7 +292,7 @@ export default function Navbar() {
                 <p className="text-xs font-bold text-[#152956]">Dobi Akasia Headquarters</p>
                 <p className="text-xs text-gray-500">Taman Akasia, Kajang, Selangor</p>
                 <a
-                  href="https://wa.me/60192225745"
+                  href="https://wa.me/601131404946"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-5 py-3 text-sm font-bold text-white shadow-md mt-4"

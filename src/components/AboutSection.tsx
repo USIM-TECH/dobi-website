@@ -32,7 +32,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Left Column: Image with Floating "Since 2008" Card */}
+          {/* Left Column: Image with Floating "Since 2012" Card */}
           <div className="lg:col-span-6 relative">
             <div className="relative w-full max-w-lg lg:max-w-none mx-auto">
               
@@ -53,7 +53,7 @@ export default function AboutSection() {
               {/* Floating Badge Card at Bottom-Right */}
               <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 z-10 bg-white/95 backdrop-blur-md p-5 sm:p-6 md:p-7 rounded-2xl md:rounded-3xl shadow-2xl border border-gray-100 max-w-[230px] sm:max-w-[270px]">
                 <h3 className="text-xl sm:text-2xl font-semibold text-[#0f1d38] tracking-tight mb-1">
-                  Since 2008
+                  Since 2012
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-500 font-medium leading-relaxed">
                   Setting the standard for premium laundry in Malaysia.
@@ -79,10 +79,10 @@ export default function AboutSection() {
             {/* Paragraphs */}
             <div className="space-y-4 text-slate-500 text-sm sm:text-base leading-relaxed mb-8">
               <p>
-                Dobi-Akasia is more than a laundry service—we are fabric care specialists. We combine the precision of modern tracking technology with the meticulous attention of traditional hand-finishing.
+                Established in 2012, Dobi Akasia has grown to become a premier laundry service provider specializing in comprehensive, high-capacity care solutions. Based in Nilai, Negeri Sembilan, we deliver an uncompromised standard of fabric care through our advanced technical setup, premium eco-friendly detergents, and highly experienced staff.
               </p>
               <p>
-                Whether it&apos;s your daily corporate wear, delicate evening gowns, or heavy household linens, we treat every item as an investment worth preserving. Our mission is to give you back your time while keeping you looking impeccable.
+                Our business is engineered to support both large-scale commercial clients and premium retail requirements, offering custom bulk contracts that prioritize prompt turnaround times, hygienic outcomes, and competitive cost efficiency. As a trusted partner for regional institutions, we understand the logistical requirements of institutional hygiene and linen maintenance.
               </p>
             </div>
 

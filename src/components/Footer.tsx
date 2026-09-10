@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
+import { MessageCircle, Phone, MapPin, Mail } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,25 +24,12 @@ export default function Footer() {
         <div className="space-y-6">
           <Link href="/en" className="flex items-center">
             <span className="font-extrabold text-3xl tracking-tight text-white">
-              Dobi<span className="text-[#9ac936]">Akasia</span>
+              Dobi<span className="text-[#1d6ff0]">Akasia</span>
             </span>
           </Link>
           <p className="text-sm leading-relaxed text-slate-300">
-            Dobi Akasia is Malaysia&apos;s leading tech-driven laundry and dry cleaning provider. We blend our rich experience with innovative green cleaning technologies to care for your garments and the planet.
+            Established in 2012 and based in Nilai, Negeri Sembilan, Dobi Akasia is a premier laundry and dry cleaning provider. We combine advanced technology and eco-friendly practices to care for your garments and the planet.
           </p>
-          <div className="space-y-3.5">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#1d6ff0]">
-              Certified Green Laundry by
-            </h4>
-            <div className="flex items-center gap-3">
-              <div className="bg-white/10 p-2 rounded-xl border border-white/15 shadow-sm">
-                <span className="text-[10px] font-semibold tracking-widest text-[#9ac936] block">myHIJAU</span>
-              </div>
-              <span className="text-xs text-slate-400 font-semibold leading-tight">
-                MyHijau Mark Certification<br />Malaysia Green Label
-              </span>
-            </div>
-          </div>
         </div>
 
         {/* Link Column 1: Services */}
@@ -55,7 +42,6 @@ export default function Footer() {
               { name: "Special Care", href: "/en/special-care" },
               { name: "Bedding Cleaning", href: "/en/bedding-cleaning" },
               { name: "Curtains & Carpets", href: "/en/curtain-cleaning" },
-              { name: "Shoe & Bag Cleaning", href: "/en/shoe-cleaning" },
             ].map((link, idx) => (
               <li key={idx}>
                 <Link href={link.href} className="hover:text-white transition-colors">
@@ -73,11 +59,7 @@ export default function Footer() {
             {[
               { name: "About Quality", href: "/en/#core-values" },
               { name: "Exceptional Service", href: "/en/service" },
-              { name: "Promotions & Combos", href: "/en/promotions" },
               { name: "Commercial Laundry", href: "/en/commercial-laundry" },
-              { name: "Franchise Opportunity", href: "/en/franchise" },
-              { name: "Academy & Training", href: "/en/training" },
-              { name: "Our Outlets Locator", href: "/en/service-centres" },
             ].map((link, idx) => (
               <li key={idx}>
                 <Link href={link.href} className="hover:text-white transition-colors">
@@ -96,19 +78,19 @@ export default function Footer() {
               <li className="flex gap-2.5 items-start">
                 <MapPin className="w-4.5 h-4.5 text-[#1d6ff0] shrink-0 mt-0.5" />
                 <address className="not-italic text-slate-300">
-                  No. 12, Jalan Akasia 1, Taman Akasia, Selangor
+                  Operational Headquarters: B8-G, Ground Floor, Acacia Avenue, Jalan Jati 9, 71800 Nilai, Negeri Sembilan
                 </address>
               </li>
               <li>
-                <a href="tel:+60123456789" className="flex items-center gap-2.5 hover:text-white transition-colors">
+                <a href="tel:+60111404946" className="flex items-center gap-2.5 hover:text-white transition-colors">
                   <Phone className="w-4.5 h-4.5 text-[#1d6ff0]" />
-                  <span>+60 12-345 6789</span>
+                  <span>011-3140 4946 / 016-440 4636</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@dobiakasia.com" className="flex items-center gap-2.5 hover:text-white transition-colors">
+                <a href="mailto:dobiakasia@gmail.com" className="flex items-center gap-2.5 hover:text-white transition-colors">
                   <Mail className="w-4.5 h-4.5 text-[#1d6ff0]" />
-                  <span>hello@dobiakasia.com</span>
+                  <span>dobiakasia@gmail.com</span>
                 </a>
               </li>
             </ul>
@@ -118,7 +100,7 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#1d6ff0]">Follow Our Community</h4>
             <div className="flex gap-3">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/DobiAkasiaNilai/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="grid size-9 place-items-center rounded-full border border-white/10 bg-white/5 text-white hover:bg-[#1d6ff0] hover:border-blue-500 hover:scale-105 transition-all"
@@ -129,7 +111,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/dobiakasianilai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="grid size-9 place-items-center rounded-full border border-white/10 bg-white/5 text-white hover:bg-[#1d6ff0] hover:border-blue-500 hover:scale-105 transition-all"
@@ -142,7 +124,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/60192225745"
+                href="https://wa.me/601131404946"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="grid size-9 place-items-center rounded-full border border-white/10 bg-white/5 text-white hover:bg-[#25D366] hover:border-green-500 hover:scale-105 transition-all"
