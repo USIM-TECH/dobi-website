@@ -32,9 +32,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/img/logo.png" />
-      </head>
       <body className={`${outfit.variable} font-sans antialiased`}>
         {children}
       </body>
