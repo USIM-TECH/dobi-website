@@ -27,7 +27,7 @@ export default function Footer() {
               Dobi<span className="text-[#1d6ff0]">Akasia</span>
             </span>
           </Link>
-          <p className="text-sm leading-relaxed text-slate-300">
+          <p className="text-base leading-relaxed text-slate-300">
             Established in 2012 and based in Nilai, Negeri Sembilan, Dobi Akasia is a premier laundry and dry cleaning provider. We combine advanced technology and eco-friendly practices to care for your garments and the planet.
           </p>
         </div>
@@ -35,7 +35,7 @@ export default function Footer() {
         {/* Link Column 1: Services */}
         <div className="space-y-5">
           <h3 className="text-base font-bold text-white uppercase tracking-wider">Services</h3>
-          <ul className="space-y-3 text-sm font-semibold">
+          <ul className="space-y-3 text-base font-semibold">
             {[
               { name: "Dry Cleaning", href: "/en/dry-cleaning" },
               { name: "Laundry", href: "/en/laundry" },
@@ -55,7 +55,7 @@ export default function Footer() {
         {/* Link Column 2: Information */}
         <div className="space-y-5">
           <h3 className="text-base font-bold text-white uppercase tracking-wider">Company</h3>
-          <ul className="space-y-3 text-sm font-semibold">
+          <ul className="space-y-3 text-base font-semibold">
             {[
               { name: "About Quality", href: "/en/#core-values" },
               { name: "Exceptional Service", href: "/en/service" },
@@ -74,7 +74,7 @@ export default function Footer() {
         <div className="space-y-6">
           <div className="space-y-4">
             <h3 className="text-base font-bold text-white uppercase tracking-wider">Contact & Socials</h3>
-            <ul className="space-y-3 text-sm font-semibold">
+            <ul className="space-y-3 text-base font-semibold">
               <li className="flex gap-2.5 items-start">
                 <MapPin className="w-4.5 h-4.5 text-[#1d6ff0] shrink-0 mt-0.5" />
                 <address className="not-italic text-slate-300">
@@ -97,7 +97,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#1d6ff0]">Follow Our Community</h4>
+            <h4 className="text-sm font-bold uppercase tracking-wider text-[#1d6ff0]">Follow Our Community</h4>
             <div className="flex gap-3">
               <a
                 href="https://www.facebook.com/DobiAkasiaNilai/"
@@ -139,7 +139,7 @@ export default function Footer() {
 
 
       {/* Bottom Copyright Area */}
-      <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400">
         <p>© {currentYear} Dobi Akasia. All rights reserved.</p>
         <div className="flex gap-6">
           <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>

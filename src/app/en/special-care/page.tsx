@@ -58,7 +58,7 @@ export default function SpecialCarePage() {
       <section className="bg-gradient-to-r from-blue-50 to-white pt-36 pb-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           <div className="space-y-6">
-            <span className="text-primary font-extrabold text-xs tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block">
+            <span className="text-primary font-extrabold text-sm tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block">
               Our Services
             </span>
             <h1 className="text-4xl md:text-5xl font-semibold text-dark-blue leading-tight tracking-tight">
@@ -68,7 +68,7 @@ export default function SpecialCarePage() {
               {intro}
             </p>
             <div className="flex flex-wrap gap-4 items-center pt-2">
-              <span className="text-sm font-semibold text-gray-600 bg-gray-100/80 border border-gray-200/60 px-4 py-2 rounded-full">
+              <span className="text-base font-semibold text-gray-600 bg-gray-100/80 border border-gray-200/60 px-4 py-2 rounded-full">
                 Price: <strong className="text-primary font-semibold">{startPrice}</strong>
               </span>
               <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="lime">
@@ -95,13 +95,13 @@ export default function SpecialCarePage() {
         <section className="py-20 bg-soft-bg">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-xl mx-auto mb-16">
-              <span className="text-primary font-extrabold text-xs tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
+              <span className="text-primary font-extrabold text-sm tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
                 Price List
               </span>
               <h2 className="text-3xl font-semibold text-dark-blue tracking-tight">
                 {title} Price Guide
               </h2>
-              <p className="text-gray-500 text-sm mt-2">
+              <p className="text-gray-500 text-base mt-2">
                 Simple, transparent pricing. No hidden fees. Check our standard rates.
               </p>
             </div>
@@ -128,13 +128,13 @@ export default function SpecialCarePage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="text-primary font-extrabold text-xs tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
+            <span className="text-primary font-extrabold text-sm tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
               Our Process
             </span>
             <h2 className="text-3xl font-semibold text-dark-blue tracking-tight">
               How We Clean Your Items
             </h2>
-            <p className="text-gray-500 text-sm mt-2">
+            <p className="text-gray-500 text-base mt-2">
               Our professional cleaning facility operates under strict hygienic standards and procedures.
             </p>
           </div>
@@ -147,7 +147,7 @@ export default function SpecialCarePage() {
                     0{index + 1}
                   </div>
                   <h3 className="font-extrabold text-dark-blue text-base leading-snug mb-2">{step.title}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed">
+                  <p className="text-gray-500 text-sm leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -162,13 +162,13 @@ export default function SpecialCarePage() {
         <section className="py-20 bg-soft-bg border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-xl mx-auto mb-16">
-              <span className="text-primary font-extrabold text-xs tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
+              <span className="text-primary font-extrabold text-sm tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
                 FAQ
               </span>
               <h2 className="text-3xl font-semibold text-dark-blue tracking-tight">
                 Frequently Asked Questions
               </h2>
-              <p className="text-gray-500 text-sm mt-2">
+              <p className="text-gray-500 text-base mt-2">
                 Have questions about our {title} service? Check out our helpful answers.
               </p>
             </div>
@@ -184,7 +184,7 @@ export default function SpecialCarePage() {
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
             Ready to Experience Freshly Cleaned Garments?
           </h2>
-          <p className="text-blue-50 max-w-xl mx-auto text-sm leading-relaxed">
+          <p className="text-blue-50 max-w-xl mx-auto text-base leading-relaxed">
             Drop off your items at any outlet, or text us via WhatsApp to arrange a professional pickup.
           </p>
           <div className="flex justify-center gap-4">

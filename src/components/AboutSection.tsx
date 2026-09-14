@@ -55,7 +55,7 @@ export default function AboutSection() {
                 <h3 className="text-xl sm:text-2xl font-semibold text-[#0f1d38] tracking-tight mb-1">
                   Since 2012
                 </h3>
-                <p className="text-xs sm:text-sm text-gray-500 font-medium leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-500 font-medium leading-relaxed">
                   Setting the standard for premium laundry in Malaysia.
                 </p>
               </div>
@@ -67,7 +67,7 @@ export default function AboutSection() {
           <div className="lg:col-span-6 flex flex-col justify-center">
             
             {/* Category Tag */}
-            <span className="text-brand-600 font-bold text-xs sm:text-sm tracking-widest uppercase mb-3 block">
+            <span className="text-brand-600 font-bold text-sm sm:text-base tracking-widest uppercase mb-3 block">
               ABOUT DOBI-AKASIA
             </span>
 
@@ -77,7 +77,7 @@ export default function AboutSection() {
             </h2>
 
             {/* Paragraphs */}
-            <div className="space-y-4 text-slate-500 text-sm sm:text-base leading-relaxed mb-8">
+            <div className="space-y-4 text-slate-500 text-base sm:text-base leading-relaxed mb-8">
               <p>
                 Established in 2012, Dobi Akasia has grown to become a premier laundry service provider specializing in comprehensive, high-capacity care solutions. Based in Nilai, Negeri Sembilan, we deliver an uncompromised standard of fabric care through our advanced technical setup, premium eco-friendly detergents, and highly experienced staff.
               </p>
@@ -96,10 +96,10 @@ export default function AboutSection() {
                       <IconComponent className="w-5 h-5 stroke-[2.2]" />
                     </div>
                     <div>
-                      <h4 className="font-extrabold text-brand-950 text-sm sm:text-base leading-snug">
+                      <h4 className="font-extrabold text-brand-950 text-base sm:text-base leading-snug">
                         {item.title}
                       </h4>
-                      <p className="text-xs text-slate-500 leading-normal mt-1">
+                      <p className="text-sm text-slate-500 leading-normal mt-1">
                         {item.description}
                       </p>
                     </div>

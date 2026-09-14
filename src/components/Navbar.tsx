@@ -66,6 +66,9 @@ export default function Navbar() {
     { name: "Special Care", href: "/en/special-care" },
     { name: "Bedding Cleaning", href: "/en/bedding-cleaning" },
     { name: "Ironing", href: "/en/ironing" },
+    { name: "Flat Work Ironer", href: "/en/flat-work-ironer" },
+    { name: "Industry Dryer", href: "/en/industry-dryer" },
+    { name: "Industry Washer", href: "/en/industry-washer" },
   ];
 
   const sidebarVariants = {
@@ -100,7 +103,7 @@ export default function Navbar() {
           <nav className="hidden lg:flex items-center gap-1" aria-label="Desktop primary">
             <Link
               href="/en"
-              className="rounded-full px-3.5 py-2 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#1d6ff0] transition-all"
+              className="rounded-full px-3.5 py-2 text-base font-bold text-slate-600 hover:bg-slate-50 hover:text-[#1d6ff0] transition-all"
             >
               Home
             </Link>
@@ -116,7 +119,7 @@ export default function Navbar() {
                 onClick={() => setActiveDropdown(activeDropdown === "services" ? null : "services")}
                 aria-expanded={activeDropdown === "services"}
                 aria-haspopup="menu"
-                className="flex items-center gap-1.5 rounded-full px-3.5 py-2 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#1d6ff0] transition-all cursor-pointer"
+                className="flex items-center gap-1.5 rounded-full px-3.5 py-2 text-base font-bold text-slate-600 hover:bg-slate-50 hover:text-[#1d6ff0] transition-all cursor-pointer"
               >
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${activeDropdown === "services" ? "rotate-180 text-[#1d6ff0]" : ""}`} />
@@ -137,7 +140,7 @@ export default function Navbar() {
                             key={idx}
                             href={item.href}
                             onClick={() => setActiveDropdown(null)}
-                            className="rounded-xl px-3.5 py-2 text-xs font-bold text-slate-600 hover:bg-brand-50 hover:text-[#1d6ff0] transition-colors"
+                            className="rounded-xl px-3.5 py-2 text-sm font-bold text-slate-600 hover:bg-brand-50 hover:text-[#1d6ff0] transition-colors"
                           >
                             {item.name}
                           </Link>
@@ -151,21 +154,21 @@ export default function Navbar() {
 
             <Link
               href="/en/promotions"
-              className="rounded-full px-3.5 py-2 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#1d6ff0] transition-all"
+              className="rounded-full px-3.5 py-2 text-base font-bold text-slate-600 hover:bg-slate-50 hover:text-[#1d6ff0] transition-all"
             >
               Promotions
             </Link>
 
             <Link
               href="/en/testimonial"
-              className="rounded-full px-3.5 py-2 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#1d6ff0] transition-all"
+              className="rounded-full px-3.5 py-2 text-base font-bold text-slate-600 hover:bg-slate-50 hover:text-[#1d6ff0] transition-all"
             >
               Testimonials
             </Link>
 
             <Link
               href="/en/contact-us"
-              className="rounded-full px-3.5 py-2 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#1d6ff0] transition-all"
+              className="rounded-full px-3.5 py-2 text-base font-bold text-slate-600 hover:bg-slate-50 hover:text-[#1d6ff0] transition-all"
             >
               Contact
             </Link>
@@ -179,7 +182,7 @@ export default function Navbar() {
               href="https://wa.me/601131404946"
               target="_blank"
               rel="noreferrer"
-              className="hidden items-center gap-2 rounded-full bg-[#1d6ff0] hover:bg-[#1255cc] px-5 py-2.5 text-xs font-bold text-white shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 lg:inline-flex"
+              className="hidden items-center gap-2 rounded-full bg-[#1d6ff0] hover:bg-[#1255cc] px-5 py-2.5 text-sm font-bold text-white shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 lg:inline-flex"
             >
               <MessageCircle className="w-4 h-4 fill-white/10" />
               <span>WhatsApp Us</span>
@@ -256,7 +259,7 @@ export default function Navbar() {
                           <Link
                             key={index}
                             href={item.href}
-                            className="block py-1.5 text-xs font-bold text-slate-600 hover:text-[#1d6ff0] transition-colors"
+                            className="block py-1.5 text-sm font-bold text-slate-600 hover:text-[#1d6ff0] transition-colors"
                           >
                             {item.name}
                           </Link>
@@ -289,13 +292,13 @@ export default function Navbar() {
               </nav>
 
               <div className="pt-6 border-t border-slate-100 text-center space-y-2">
-                <p className="text-xs font-bold text-[#152956]">Dobi Akasia Headquarters</p>
-                <p className="text-xs text-gray-500">Taman Akasia, Kajang, Selangor</p>
+                <p className="text-sm font-bold text-[#152956]">Dobi Akasia Headquarters</p>
+                <p className="text-sm text-gray-500">Taman Akasia, Kajang, Selangor</p>
                 <a
                   href="https://wa.me/601131404946"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-5 py-3 text-sm font-bold text-white shadow-md mt-4"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-5 py-3 text-base font-bold text-white shadow-md mt-4"
                 >
                   <MessageCircle className="w-5 h-5" />
                   <span>WhatsApp Chat</span>

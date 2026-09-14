@@ -31,6 +31,10 @@ import {
   BedDouble,
   Blinds,
   Sofa,
+  Users,
+  Layers,
+  Wind,
+  Droplets,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -115,29 +119,71 @@ export default function EnglishHomePage() {
       glow: "bg-indigo-200/50",
       iconColor: "text-indigo-600",
     },
+    {
+      title: "Flat Work Ironer",
+      description:
+        "3-roller industrial ironer for bedsheets, tablecloths, and other large flat linens.",
+      icon: Layers,
+      href: "/en/flat-work-ironer",
+      badge: "3-Roller",
+      bg: "from-teal-50 to-teal-100/40",
+      glow: "bg-teal-200/50",
+      iconColor: "text-teal-600",
+    },
+    {
+      title: "Industry Dryer",
+      description:
+        "High-capacity 50kg dryer for bulk loads like comforters, curtains, and uniforms.",
+      icon: Wind,
+      href: "/en/industry-dryer",
+      badge: "50kg Capacity",
+      bg: "from-orange-50 to-orange-100/40",
+      glow: "bg-orange-200/50",
+      iconColor: "text-orange-600",
+    },
+    {
+      title: "Industry Washer",
+      description:
+        "Heavy-duty 50kg washer for large-volume linens, uniforms, and household loads.",
+      icon: Droplets,
+      href: "/en/industry-washer",
+      badge: "50kg Capacity",
+      bg: "from-cyan-50 to-cyan-100/40",
+      glow: "bg-cyan-200/50",
+      iconColor: "text-cyan-600",
+    },
   ];
 
   const testimonials = [
     {
-      name: "Shirley Liew",
-      text: "Outstanding service! My wedding gown was stained with wine, but Dobi Akasia removed it completely. It looks brand new! Their attention to detail and care is unmatched.",
-      avatar: "/img/image45.png",
+      name: "Nursyazwani Azalan",
+      text: "Really happy with the service here! The place is clean and comfortable. My clothes were clean and smelled fresh. Highly recommended!",
       stars: 5,
       role: "Verified Google Reviewer",
     },
     {
-      name: "Faris Daniel",
-      text: "Great experience using their pickup service. Super convenient to hand over bedding and pick it up fresh after 3 days. Highly recommended for busy folks!",
-      avatar: "/img/image48.png",
+      name: "Siva Perumal",
+      text: "My experience was extremely positive. From the moment I entered the facility, I was impressed by how clean, organised, and welcoming the environment was. The staff members were friendly, respectful, and very helpful throughout my visit.",
       stars: 5,
-      role: "Pickup Customer",
+      role: "Verified Google Reviewer",
     },
     {
-      name: "Amanda Yap",
-      text: "Their carpet cleaning is top notch. They extracted so much dust and dirt, and the smell is wonderfully fresh. Very professional staff and fast turnaround time.",
-      avatar: "/img/image34.png",
+      name: "thenmole moly",
+      text: "Really impressed with Dobi Akasia! Clean and well-organised shop, good service and very convenient. The staff are friendly and helpful, and the overall experience was excellent.",
       stars: 5,
-      role: "Homeowner",
+      role: "Verified Google Reviewer",
+    },
+    {
+      name: "shasha pillay",
+      text: "Five-star service! Fast, friendly, and efficient. My clothes look pristine and smell amazing. Highly recommended!",
+      stars: 5,
+      role: "Verified Google Reviewer",
+    },
+    {
+      name: "Darshan",
+      text: "Good service and a clean place. Overall, a good dobi shop with affordable prices.",
+      stars: 5,
+      role: "Verified Google Reviewer",
     },
   ];
 
@@ -190,7 +236,7 @@ export default function EnglishHomePage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <a
                   href="#services"
-                  className="inline-flex min-h-14 items-center justify-center rounded-full border-2 border-slate-200 bg-white/80 px-7 py-4 text-sm font-extrabold text-dark-blue shadow-sm backdrop-blur transition hover:border-[#1d6ff0] hover:text-[#1d6ff0] focus:outline-none focus:ring-4 focus:ring-blue-100"
+                  className="inline-flex min-h-14 items-center justify-center rounded-full border-2 border-slate-200 bg-white/80 px-7 py-4 text-base font-extrabold text-dark-blue shadow-sm backdrop-blur transition hover:border-[#1d6ff0] hover:text-[#1d6ff0] focus:outline-none focus:ring-4 focus:ring-blue-100"
                 >
                   View services & prices
                 </a>
@@ -246,10 +292,10 @@ export default function EnglishHomePage() {
                 <step.icon className="h-5 w-5" />
               </span>
               <div>
-                <h2 className="text-sm font-semibold text-dark-blue">
+                <h2 className="text-base font-semibold text-dark-blue">
                   {step.title}
                 </h2>
-                <p className="mt-0.5 text-xs font-semibold text-slate-500">
+                <p className="mt-0.5 text-sm font-semibold text-slate-500">
                   {step.text}
                 </p>
               </div>
@@ -285,7 +331,7 @@ export default function EnglishHomePage() {
           {/* Right Column - Text & 3 Key Cards */}
           <div className="lg:col-span-7 space-y-8 text-left">
             <div className="space-y-4">
-              <span className="text-primary font-semibold text-xs tracking-widest uppercase block">
+              <span className="text-primary font-semibold text-sm tracking-widest uppercase block">
                 About Dobi-Akasia
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-dark-blue leading-tight tracking-tight">
@@ -293,7 +339,7 @@ export default function EnglishHomePage() {
               </h2>
             </div>
 
-            <div className="space-y-4 text-gray-650 text-sm md:text-base font-medium leading-relaxed max-w-2xl">
+            <div className="space-y-4 text-gray-650 text-base md:text-base font-medium leading-relaxed max-w-2xl">
               <p>
                 Established in 2012, Dobi Akasia has grown to become a premier
                 laundry service provider specializing in comprehensive,
@@ -348,16 +394,32 @@ export default function EnglishHomePage() {
                     <item.icon className="h-5 w-5" />
                   </span>
                   <div>
-                    <h4 className="font-bold text-dark-blue text-sm tracking-tight">
+                    <h4 className="font-bold text-dark-blue text-base tracking-tight">
                       {item.title}
                     </h4>
-                    <p className="text-gray-500 text-xs mt-1.5 leading-relaxed">
+                    <p className="text-gray-500 text-sm mt-1.5 leading-relaxed">
                       {item.text}
                     </p>
                   </div>
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet Our Team */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
+          <span className="text-primary font-bold text-sm tracking-widest uppercase">Our People</span>
+          <h2 className="text-3xl font-extrabold text-dark-blue leading-tight">Meet Our Team</h2>
+          <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">
+            The friendly faces behind Dobi Akasia, ready to take care of your laundry and answer your questions.
+          </p>
+
+          <div className="rounded-3xl border-2 border-dashed border-gray-200 bg-soft-bg aspect-video max-w-2xl mx-auto flex flex-col items-center justify-center gap-3 text-gray-400">
+            <Users className="w-10 h-10" />
+            <p className="text-sm font-semibold">Team photo coming soon</p>
           </div>
         </div>
       </section>
@@ -369,13 +431,13 @@ export default function EnglishHomePage() {
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-primary font-extrabold text-xs tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
+            <span className="text-primary font-extrabold text-sm tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
               Our Services
             </span>
             <h2 className="text-3xl md:text-4xl font-semibold text-dark-blue tracking-tight">
               Everything you need, cared for properly
             </h2>
-            <p className="text-gray-500 text-sm mt-3 leading-relaxed">
+            <p className="text-gray-500 text-base mt-3 leading-relaxed">
               We process everyday garments, luxury attire, home items, and
               special care cleaning with strict quality controls.
             </p>
@@ -397,7 +459,7 @@ export default function EnglishHomePage() {
                       <div className="relative w-20 h-20 rounded-full bg-white shadow-md flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
                         <service.icon className={`w-9 h-9 ${service.iconColor}`} strokeWidth={1.75} />
                       </div>
-                      <span className="absolute top-3 right-3 bg-white/95 backdrop-blur-md text-[#152956] border border-slate-200/80 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
+                      <span className="absolute top-3 right-3 bg-white/95 backdrop-blur-md text-[#152956] border border-slate-200/80 text-sm font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
                         {service.badge}
                       </span>
                     </div>
@@ -406,14 +468,14 @@ export default function EnglishHomePage() {
                       <h3 className="text-lg font-extrabold text-dark-blue mb-2 group-hover:text-primary transition-colors">
                         {service.title}
                       </h3>
-                      <p className="text-gray-500 text-xs leading-relaxed">
+                      <p className="text-gray-500 text-sm leading-relaxed">
                         {service.description}
                       </p>
                     </div>
                   </div>
 
                   <div className="px-6 pb-6 pt-2">
-                    <div className="flex items-center justify-between text-xs font-bold text-primary pt-3 border-t border-gray-100 group-hover:text-primary-dark">
+                    <div className="flex items-center justify-between text-sm font-bold text-primary pt-3 border-t border-gray-100 group-hover:text-primary-dark">
                       <span>View Pricing & FAQs</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -427,9 +489,9 @@ export default function EnglishHomePage() {
               type="button"
               onClick={() => setShowAllServices((current) => !current)}
               aria-expanded={showAllServices}
-              className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-[#1d6ff0] bg-white px-7 py-3 text-sm font-extrabold text-[#1d6ff0] transition hover:bg-[#1d6ff0] hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-100"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-[#1d6ff0] bg-white px-7 py-3 text-base font-extrabold text-[#1d6ff0] transition hover:bg-[#1d6ff0] hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-100"
             >
-              {showAllServices ? "Show fewer services" : "View all 7 services"}
+              {showAllServices ? "Show fewer services" : "View all 10 services"}
             </button>
           </div>
         </div>
@@ -439,13 +501,13 @@ export default function EnglishHomePage() {
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-primary font-extrabold text-xs tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
+            <span className="text-primary font-extrabold text-sm tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
               Our Commitment to Sustainability
             </span>
             <h2 className="text-3xl md:text-4xl font-semibold text-dark-blue tracking-tight">
               Smarter Laundry. Greener Future.
             </h2>
-            <p className="text-gray-500 text-sm mt-3 leading-relaxed">
+            <p className="text-gray-500 text-base mt-3 leading-relaxed">
               At Dobi Akasia, sustainability is integrated into the way we
               operate. Through technology and responsible practices, we
               strive to reduce our environmental impact while delivering
@@ -461,7 +523,7 @@ export default function EnglishHomePage() {
               <h3 className="text-lg font-extrabold text-dark-blue">
                 Paperless by Design
               </h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
+              <p className="text-gray-500 text-base leading-relaxed">
                 Our in-house web and mobile system makes our laundry
                 operations paperless from start to finish — from checking
                 items received, tracking every service, confirming completed
@@ -477,7 +539,7 @@ export default function EnglishHomePage() {
               <h3 className="text-lg font-extrabold text-dark-blue">
                 Eco-Friendly Cleaning
               </h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
+              <p className="text-gray-500 text-base leading-relaxed">
                 We use eco-friendly cleaning chemicals as part of our
                 commitment to more responsible and sustainable laundry
                 practices.
@@ -493,7 +555,7 @@ export default function EnglishHomePage() {
         aria-labelledby="testimonials-heading"
       >
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <span className="text-primary font-extrabold text-xs tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
+          <span className="text-primary font-extrabold text-sm tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
             Testimonials
           </span>
           <h2
@@ -537,20 +599,17 @@ export default function EnglishHomePage() {
                     </p>
 
                     <div className="flex items-center justify-center gap-4 pt-4 border-t border-gray-50">
-                      <img
-                        src={item.avatar}
-                        alt={`Photo of ${item.name}`}
-                        className="w-12 h-12 rounded-full object-cover border-2 border-primary"
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).src =
-                            "/img/google.png";
-                        }}
-                      />
+                      <div
+                        className="w-12 h-12 rounded-full bg-primary/10 border-2 border-primary text-primary font-extrabold flex items-center justify-center flex-shrink-0"
+                        aria-hidden="true"
+                      >
+                        {item.name.charAt(0).toUpperCase()}
+                      </div>
                       <div className="text-left">
                         <h3 className="font-extrabold text-dark-blue text-base leading-none">
                           {item.name}
                         </h3>
-                        <span className="text-xs font-semibold text-slate-500 block mt-1">
+                        <span className="text-sm font-semibold text-slate-500 block mt-1">
                           {item.role}
                         </span>
                       </div>
@@ -566,9 +625,9 @@ export default function EnglishHomePage() {
             <div className="mt-8 flex justify-center">
               <Link
                 href="/en/testimonial"
-                className="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline"
+                className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline"
               >
-                Read All 25+ Customer Reviews{" "}
+                Read All 12 Google Reviews{" "}
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
