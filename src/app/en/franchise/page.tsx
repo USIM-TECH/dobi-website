@@ -80,7 +80,7 @@ export default function FranchisePage() {
 
           <div className="hidden lg:block relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-gray-50 border border-gray-100">
             <img
-              src="/img/welcome-2.png"
+              src="/assets/welcome-2.png"
               alt="Franchise store model"
               className="w-full h-full object-cover"
               onError={(e) => {

@@ -19,6 +19,14 @@ export default function FlatWorkIronerPage() {
       question: "Do you offer this for bulk or business orders?",
       answer: "Yes, this service is ideal for hotels, restaurants, and institutions with large volumes of flat linen. Contact us for a bulk quote.",
     },
+    {
+      question: "How is this different from your regular Ironing service?",
+      answer: "The flatwork ironer presses large flat linens through heated rollers, while our regular Ironing service uses hand pressing for shirts, pants, and garments with buttons or zippers.",
+    },
+    {
+      question: "What's the turnaround time for flatwork ironing?",
+      answer: "Standard turnaround is 2 to 4 working days depending on order volume; bulk B2B orders can be scheduled to your SLA.",
+    },
   ];
 
   const steps: { title: string; desc: string }[] = [
@@ -73,12 +81,9 @@ export default function FlatWorkIronerPage() {
 
           <div className="hidden lg:block relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl bg-gray-50 border border-gray-100">
             <img
-              src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&w=1000&q=80"
-              alt={title}
+              src="/assets/flat-work-ironer.jpg"
+              alt="Flatwork ironer pressing a bedsheet"
               className="w-full h-full object-cover"
-              onError={(e) => {
-                (e.target as HTMLElement).style.display = "none";
-              }}
             />
           </div>
         </div>
@@ -143,7 +148,7 @@ export default function FlatWorkIronerPage() {
             Need Bulk Flatwork Ironing?
           </h2>
           <p className="text-blue-50 max-w-xl mx-auto text-base leading-relaxed">
-            Drop off your linens at any outlet, or text us via WhatsApp to arrange a professional pickup and get a bulk quote.
+            Drop off your linens at our outlet, or text us via WhatsApp to arrange a professional pickup and get a bulk quote.
           </p>
           <div className="flex justify-center gap-4">
             <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="white">

@@ -43,7 +43,7 @@ export default function TermsOfServicePage() {
             <p>
               We provide laundry, dry cleaning, and fabric care services for
               individual and commercial customers, available through our
-              outlets or by arranging pickup via WhatsApp, subject to
+              outlet or by arranging pickup via WhatsApp, subject to
               availability.
             </p>
           </div>
@@ -53,7 +53,7 @@ export default function TermsOfServicePage() {
               2. Pricing & Payment
             </h2>
             <p>
-              Prices are as listed at our outlets or communicated at the time
+              Prices are as listed at our outlet or communicated at the time
               of booking, and may be updated from time to time. Payment is
               due upon collection of your items unless otherwise agreed for
               commercial or bulk contracts.

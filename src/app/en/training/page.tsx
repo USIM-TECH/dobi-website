@@ -41,7 +41,7 @@ export default function TrainingPage() {
     },
     {
       question: "Where is the training held?",
-      answer: "Training sessions are conducted at our central Headquarters facility in Taman Shamelin Perkasa, Cheras, which is equipped with professional laundry equipment.",
+      answer: "Training sessions are conducted at our central Headquarters facility in Nilai, Negeri Sembilan, which is equipped with professional laundry equipment.",
     },
     {
       question: "Is there any prerequisite knowledge required?",
@@ -77,7 +77,7 @@ export default function TrainingPage() {
 
           <div className="hidden lg:block relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-gray-50 border border-gray-100">
             <img
-              src="/img/welcome-3.png"
+              src="/assets/welcome-3.png"
               alt="Laundry masterclass class"
               className="w-full h-full object-cover"
               onError={(e) => {

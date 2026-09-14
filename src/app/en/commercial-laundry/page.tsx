@@ -119,7 +119,7 @@ export default function CommercialPage() {
 
           <div className="hidden lg:block relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-gray-50 border border-gray-100">
             <img
-              src="/img/wet.png"
+              src="/assets/wet.png"
               alt="Commercial laundry process"
               className="w-full h-full object-cover"
               onError={(e) => {

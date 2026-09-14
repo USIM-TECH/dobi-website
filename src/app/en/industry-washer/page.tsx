@@ -19,6 +19,14 @@ export default function IndustryWasherPage() {
       question: "Can I combine this with drying or ironing?",
       answer: "Yes, we can wash, dry, and press your items end-to-end — just let us know your requirements.",
     },
+    {
+      question: "How long does a wash cycle take?",
+      answer: "A standard 50kg wash cycle takes about 30 to 45 minutes depending on soil level and fabric type.",
+    },
+    {
+      question: "Can different fabric types be washed together in one load?",
+      answer: "We sort items by fabric type and color first, then group compatible items into the same cycle for safe, even cleaning.",
+    },
   ];
 
   const steps: { title: string; desc: string }[] = [
@@ -73,12 +81,9 @@ export default function IndustryWasherPage() {
 
           <div className="hidden lg:block relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl bg-gray-50 border border-gray-100">
             <img
-              src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&w=1000&q=80"
-              alt={title}
+              src="/assets/industry-washer.jpg"
+              alt="Row of large-capacity industrial washing machines"
               className="w-full h-full object-cover"
-              onError={(e) => {
-                (e.target as HTMLElement).style.display = "none";
-              }}
             />
           </div>
         </div>
@@ -143,7 +148,7 @@ export default function IndustryWasherPage() {
             Need Bulk Washing Capacity?
           </h2>
           <p className="text-blue-50 max-w-xl mx-auto text-base leading-relaxed">
-            Drop off your items at any outlet, or text us via WhatsApp to arrange a professional pickup and get a bulk quote.
+            Drop off your items at our outlet, or text us via WhatsApp to arrange a professional pickup and get a bulk quote.
           </p>
           <div className="flex justify-center gap-4">
             <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="white">

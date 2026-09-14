@@ -25,6 +25,14 @@ export default function SpecialCarePage() {
   {
     "question": "How do you process leather and silk?",
     "answer": "We use manual hand-wash techniques and specialized leather conditioners to preserve natural suppleness."
+  },
+  {
+    "question": "Do you provide a damage guarantee for delicate items?",
+    "answer": "Our specialists follow strict manufacturer care labels, and any items with pre-existing risk are flagged and discussed with you before cleaning begins."
+  },
+  {
+    "question": "How long does special care cleaning take?",
+    "answer": "Special care items typically take 5 to 7 working days due to the detailed manual handling involved."
   }
 ];
   const steps: { title: string; desc: string }[] = [
@@ -185,7 +193,7 @@ export default function SpecialCarePage() {
             Ready to Experience Freshly Cleaned Garments?
           </h2>
           <p className="text-blue-50 max-w-xl mx-auto text-base leading-relaxed">
-            Drop off your items at any outlet, or text us via WhatsApp to arrange a professional pickup.
+            Drop off your items at our outlet, or text us via WhatsApp to arrange a professional pickup.
           </p>
           <div className="flex justify-center gap-4">
             <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="white">

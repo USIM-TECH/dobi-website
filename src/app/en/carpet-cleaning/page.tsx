@@ -25,6 +25,14 @@ export default function CarpetCleaningPage() {
   {
     "question": "How long does drying take?",
     "answer": "Carpets spend 24 to 48 hours in our dehumidified drying room to guarantee zero damp odor."
+  },
+  {
+    "question": "Can you remove pet stains and odours?",
+    "answer": "Yes, our deodorizing sanitization treatment specifically targets pet stains and lingering odours."
+  },
+  {
+    "question": "Do I need to be home during pickup and drop-off?",
+    "answer": "No, you can schedule a pickup time that's convenient for you and we'll handle the transport safely."
   }
 ];
   const steps: { title: string; desc: string }[] = [
@@ -185,7 +193,7 @@ export default function CarpetCleaningPage() {
             Ready to Experience Freshly Cleaned Garments?
           </h2>
           <p className="text-blue-50 max-w-xl mx-auto text-base leading-relaxed">
-            Drop off your items at any outlet, or text us via WhatsApp to arrange a professional pickup.
+            Drop off your items at our outlet, or text us via WhatsApp to arrange a professional pickup.
           </p>
           <div className="flex justify-center gap-4">
             <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="white">

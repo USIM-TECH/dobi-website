@@ -217,7 +217,7 @@ export default function DryCleaningPage() {
             Ready to Experience Freshly Cleaned Garments?
           </h2>
           <p className="text-blue-50 max-w-xl mx-auto text-base leading-relaxed">
-            Drop off your items at any outlet, or text us via WhatsApp to arrange a professional pickup.
+            Drop off your items at our outlet, or text us via WhatsApp to arrange a professional pickup.
           </p>
           <div className="flex justify-center gap-4">
             <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="white">

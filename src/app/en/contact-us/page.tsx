@@ -1,19 +1,60 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Button from "@/components/Button";
 import { Mail, Phone, MapPin, CheckCircle, MessageCircle, Star } from "lucide-react";
 
 const GOOGLE_MAPS_URL = "https://www.google.com/maps?cid=14488143292147049191";
+const MAP_MARKER = "2.8369316,101.7873711(Dobi+Akasia)";
+const MAP_CENTER = "2.841072,101.780998";
+const MAP_EMBED_SRC = `https://maps.google.com/maps?q=${MAP_MARKER}&ll=${MAP_CENTER}&z=16&output=embed`;
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSendAnother = () => {
+    formRef.current?.reset();
+    setSubmitted(false);
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setError("");
+    setSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const payload = {
+      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "",
+      subject: "New Inquiry from Dobi Akasia Website",
+      ...Object.fromEntries(formData),
+    };
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+      const result = await res.json();
+
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again or WhatsApp us directly.");
+      }
+    } catch {
+      setError("Something went wrong. Please try again or WhatsApp us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -48,7 +89,7 @@ export default function ContactPage() {
           <div className="relative bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden flex-1 flex flex-col min-h-[420px]">
             <iframe
               title="Dobi Akasia Location"
-              src={`${GOOGLE_MAPS_URL}&output=embed`}
+              src={MAP_EMBED_SRC}
               className="w-full flex-1 border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -110,39 +151,53 @@ export default function ContactPage() {
         </div>
 
         {/* Right inquiry form */}
-        <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 space-y-6 h-fit">
+        <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col">
           <div className="text-center">
             <h3 className="text-2xl font-extrabold text-dark-blue">Send An Inquiry</h3>
             <p className="text-gray-500 text-sm mt-1">Please enter your request details below.</p>
           </div>
 
-          {submitted ? (
-            <div className="p-8 text-center bg-lime/10 border border-lime/20 rounded-2xl space-y-3">
-              <CheckCircle className="w-12 h-12 text-lime mx-auto" />
-              <h4 className="font-bold text-dark-blue text-lg">Message Sent!</h4>
-              <p className="text-gray-600 text-base">Thank you for contacting us. We will get back to you within 1 business day.</p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="relative flex-1 mt-6">
+            {submitted && (
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center bg-lime/10 border border-lime/20 rounded-2xl space-y-3 p-8">
+                <CheckCircle className="w-12 h-12 text-lime" />
+                <h4 className="font-bold text-dark-blue text-lg">Message Sent!</h4>
+                <p className="text-gray-600 text-base">Thank you for contacting us. We will get back to you within 1 business day.</p>
+                <button
+                  type="button"
+                  onClick={handleSendAnother}
+                  className="text-primary font-bold text-sm hover:text-primary-dark transition-colors underline underline-offset-2 pt-2 cursor-pointer"
+                >
+                  Send Another Message
+                </button>
+              </div>
+            )}
+
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              aria-hidden={submitted}
+              className={`space-y-4 ${submitted ? "invisible" : ""}`}
+            >
               <div className="space-y-1">
                 <label className="text-sm font-bold text-dark-blue block">Your Name</label>
-                <input type="text" required placeholder="e.g. Rachel Tan" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                <input name="name" type="text" required placeholder="e.g. Rachel Tan" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1">
                   <label className="text-sm font-bold text-dark-blue block">Email Address</label>
-                  <input type="email" required placeholder="rachel@gmail.com" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                  <input name="email" type="email" required placeholder="rachel@gmail.com" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
                 </div>
                 <div className="space-y-1">
                   <label className="text-sm font-bold text-dark-blue block">Phone Number</label>
-                  <input type="tel" required placeholder="e.g. 016-1234567" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                  <input name="phone" type="tel" required placeholder="e.g. 016-1234567" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
                 </div>
               </div>
 
               <div className="space-y-1">
                 <label className="text-sm font-bold text-dark-blue block">Inquiry Type</label>
-                <select className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary">
+                <select name="inquiry_type" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary">
                   <option>General Customer Support</option>
                   <option>Pickup & Delivery Order</option>
                   <option>Bulk Commercial Laundry (B2B)</option>
@@ -153,14 +208,18 @@ export default function ContactPage() {
 
               <div className="space-y-1">
                 <label className="text-sm font-bold text-dark-blue block">Message Content</label>
-                <textarea rows={4} required placeholder="Write down details here..." className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                <textarea name="message" rows={4} required placeholder="Write down details here..." className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
               </div>
 
-              <button type="submit" className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3.5 rounded-xl shadow-md transition-colors cursor-pointer text-base">
-                Send Message
+              {error && (
+                <p className="text-red-600 text-sm font-semibold text-center">{error}</p>
+              )}
+
+              <button type="submit" disabled={submitting} className="w-full bg-primary hover:bg-primary-dark disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-xl shadow-md transition-colors cursor-pointer text-base">
+                {submitting ? "Sending..." : "Send Message"}
               </button>
             </form>
-          )}
+          </div>
         </div>
       </section>
 

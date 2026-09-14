@@ -33,7 +33,7 @@ export default function PrivacyPolicyPage() {
             Dobi Akasia (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) respects your privacy and is
             committed to protecting the personal data you share with us when
             you visit our website, use our services, or contact us via
-            WhatsApp, phone, email, or in person at our outlets. This Privacy
+            WhatsApp, phone, email, or in person at our outlet. This Privacy
             Policy explains what information we collect, how we use it, and
             the choices you have.
           </p>
@@ -59,7 +59,7 @@ export default function PrivacyPolicyPage() {
             <ul className="list-disc pl-5 space-y-1.5">
               <li>Process and fulfil your laundry and dry cleaning orders.</li>
               <li>Communicate with you about your order status, inquiries, or promotions.</li>
-              <li>Improve our services, outlets, and customer experience.</li>
+              <li>Improve our services, outlet, and customer experience.</li>
               <li>Comply with legal and regulatory obligations.</li>
             </ul>
           </div>

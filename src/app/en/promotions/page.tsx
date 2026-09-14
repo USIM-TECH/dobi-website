@@ -10,8 +10,8 @@ export default function PromotionsPage() {
   const promos = [
     {
       title: "New Customer Walk-in Promo",
-      desc: "First time trying Dobi Akasia? Enjoy special introductory rates on laundry and dry cleaning when you walk in to any of our physical service centers.",
-      terms: ["Walk-in customers only", "Klang Valley outlets only", "Cannot stack with other promos"],
+      desc: "First time trying Dobi Akasia? Enjoy special introductory rates on laundry and dry cleaning when you walk in to our outlet in Nilai, Negeri Sembilan.",
+      terms: ["Walk-in customers only", "Valid at our Nilai outlet only", "Cannot stack with other promos"],
       badge: "Save More",
       color: "border-primary",
       iconColor: "text-primary",

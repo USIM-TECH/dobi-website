@@ -19,6 +19,14 @@ export default function IndustryDryerPage() {
       question: "Is this available for bulk or business orders?",
       answer: "Yes, ideal for hotels, dormitories, and institutions with large linen volumes. Contact us for a bulk quote.",
     },
+    {
+      question: "Can I bring items just for drying, without washing?",
+      answer: "Yes, you can use our industry dryer as a standalone service for items already washed at home.",
+    },
+    {
+      question: "How long does a drying cycle take?",
+      answer: "A standard 50kg cycle takes about 45 to 60 minutes depending on fabric type and load density.",
+    },
   ];
 
   const steps: { title: string; desc: string }[] = [
@@ -73,12 +81,9 @@ export default function IndustryDryerPage() {
 
           <div className="hidden lg:block relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl bg-gray-50 border border-gray-100">
             <img
-              src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&w=1000&q=80"
-              alt={title}
+              src="/assets/industry-dryer.jpg"
+              alt="Row of large-capacity industrial dryers"
               className="w-full h-full object-cover"
-              onError={(e) => {
-                (e.target as HTMLElement).style.display = "none";
-              }}
             />
           </div>
         </div>
@@ -143,7 +148,7 @@ export default function IndustryDryerPage() {
             Need Bulk Drying Capacity?
           </h2>
           <p className="text-blue-50 max-w-xl mx-auto text-base leading-relaxed">
-            Drop off your items at any outlet, or text us via WhatsApp to arrange a professional pickup and get a bulk quote.
+            Drop off your items at our outlet, or text us via WhatsApp to arrange a professional pickup and get a bulk quote.
           </p>
           <div className="flex justify-center gap-4">
             <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="white">

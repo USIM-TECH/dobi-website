@@ -4,16 +4,19 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, MessageCircle, MapPin, Clock, Phone, Mail } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, MessageCircle, MapPin, Clock, Phone, Mail } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [industrySubOpen, setIndustrySubOpen] = useState(false);
+  const [mobileIndustryOpen, setMobileIndustryOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const pathname = usePathname();
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const industryTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = (name: string) => {
     if (dropdownTimeoutRef.current) {
@@ -25,6 +28,23 @@ export default function Navbar() {
   const handleMouseLeave = () => {
     dropdownTimeoutRef.current = setTimeout(() => {
       setActiveDropdown(null);
+      setIndustrySubOpen(false);
+    }, 250);
+  };
+
+  const handleIndustryEnter = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    if (industryTimeoutRef.current) {
+      clearTimeout(industryTimeoutRef.current);
+    }
+    setIndustrySubOpen(true);
+  };
+
+  const handleIndustryLeave = () => {
+    industryTimeoutRef.current = setTimeout(() => {
+      setIndustrySubOpen(false);
     }, 250);
   };
 
@@ -32,6 +52,9 @@ export default function Navbar() {
     return () => {
       if (dropdownTimeoutRef.current) {
         clearTimeout(dropdownTimeoutRef.current);
+      }
+      if (industryTimeoutRef.current) {
+        clearTimeout(industryTimeoutRef.current);
       }
     };
   }, []);
@@ -54,18 +77,28 @@ export default function Navbar() {
     setIsOpen(false);
     setActiveAccordion(null);
     setActiveDropdown(null);
+    setIndustrySubOpen(false);
+    setMobileIndustryOpen(false);
   }, [pathname]);
 
   const toggleAccordion = (name: string) => {
     setActiveAccordion(activeAccordion === name ? null : name);
   };
 
-  const services = [
+  const servicesBeforeIndustry = [
     { name: "Dry Cleaning", href: "/en/dry-cleaning" },
     { name: "Laundry", href: "/en/laundry" },
+  ];
+
+  const servicesAfterIndustry = [
     { name: "Special Care", href: "/en/special-care" },
     { name: "Bedding Cleaning", href: "/en/bedding-cleaning" },
+    { name: "Curtains", href: "/en/curtain-cleaning" },
+    { name: "Carpets", href: "/en/carpet-cleaning" },
     { name: "Ironing", href: "/en/ironing" },
+  ];
+
+  const industryServices = [
     { name: "Flat Work Ironer", href: "/en/flat-work-ironer" },
     { name: "Industry Dryer", href: "/en/industry-dryer" },
     { name: "Industry Washer", href: "/en/industry-washer" },
@@ -134,8 +167,60 @@ export default function Navbar() {
                     className="absolute left-0 top-full pt-2 z-50 w-72"
                   >
                     <div className="rounded-2xl border border-slate-100 bg-white p-3 shadow-2xl">
-                      <div className="grid grid-cols-1 gap-1 max-h-[420px] overflow-y-auto pr-1">
-                        {services.map((item, idx) => (
+                      <div className="grid grid-cols-1 gap-1">
+                        {servicesBeforeIndustry.map((item, idx) => (
+                          <Link
+                            key={idx}
+                            href={item.href}
+                            onClick={() => setActiveDropdown(null)}
+                            className="rounded-xl px-3.5 py-2 text-sm font-bold text-slate-600 hover:bg-brand-50 hover:text-[#1d6ff0] transition-colors"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+
+                        <div
+                          className="relative"
+                          onMouseEnter={handleIndustryEnter}
+                          onMouseLeave={handleIndustryLeave}
+                        >
+                          <button
+                            type="button"
+                            aria-expanded={industrySubOpen}
+                            aria-haspopup="menu"
+                            className="w-full flex items-center justify-between rounded-xl px-3.5 py-2 text-sm font-bold text-slate-600 hover:bg-brand-50 hover:text-[#1d6ff0] transition-colors cursor-pointer"
+                          >
+                            <span>Industry Standard</span>
+                            <ChevronRight className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${industrySubOpen ? "text-[#1d6ff0]" : ""}`} />
+                          </button>
+
+                          <AnimatePresence>
+                            {industrySubOpen && (
+                              <motion.div
+                                initial={{ opacity: 0, x: -6 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -6 }}
+                                transition={{ duration: 0.15, ease: "easeOut" }}
+                                className="absolute left-full top-0 ml-2 z-50 w-64"
+                              >
+                                <div className="rounded-2xl border border-slate-100 bg-white p-3 shadow-2xl">
+                                  {industryServices.map((item, idx) => (
+                                    <Link
+                                      key={idx}
+                                      href={item.href}
+                                      onClick={() => setActiveDropdown(null)}
+                                      className="rounded-xl px-3.5 py-2 text-sm font-bold text-slate-600 hover:bg-brand-50 hover:text-[#1d6ff0] transition-colors block"
+                                    >
+                                      {item.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+
+                        {servicesAfterIndustry.map((item, idx) => (
                           <Link
                             key={idx}
                             href={item.href}
@@ -255,7 +340,54 @@ export default function Navbar() {
                         transition={{ duration: 0.25 }}
                         className="overflow-hidden bg-slate-50 rounded-2xl my-2 px-4 py-2 space-y-1 border border-slate-100"
                       >
-                        {services.map((item, index) => (
+                        {servicesBeforeIndustry.map((item, index) => (
+                          <Link
+                            key={index}
+                            href={item.href}
+                            className="block py-1.5 text-sm font-bold text-slate-600 hover:text-[#1d6ff0] transition-colors"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+
+                        <div className="pt-1">
+                          <button
+                            type="button"
+                            onClick={() => setMobileIndustryOpen(!mobileIndustryOpen)}
+                            aria-expanded={mobileIndustryOpen}
+                            className="w-full flex items-center justify-between py-1.5 text-sm font-bold text-slate-600 hover:text-[#1d6ff0] transition-colors cursor-pointer"
+                          >
+                            <span>Industry Standard</span>
+                            <ChevronRight
+                              className={`w-4 h-4 transition-transform duration-300 ${
+                                mobileIndustryOpen ? "rotate-90 text-[#1d6ff0]" : "text-gray-400"
+                              }`}
+                            />
+                          </button>
+                          <AnimatePresence initial={false}>
+                            {mobileIndustryOpen && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "auto", opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.25 }}
+                                className="overflow-hidden pl-4 space-y-1 border-l-2 border-slate-200 ml-1"
+                              >
+                                {industryServices.map((item, index) => (
+                                  <Link
+                                    key={index}
+                                    href={item.href}
+                                    className="block py-1.5 text-sm font-bold text-slate-600 hover:text-[#1d6ff0] transition-colors"
+                                  >
+                                    {item.name}
+                                  </Link>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+
+                        {servicesAfterIndustry.map((item, index) => (
                           <Link
                             key={index}
                             href={item.href}

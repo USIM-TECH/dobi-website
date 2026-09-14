@@ -41,6 +41,14 @@ export default function BeddingCleaningPage() {
   {
     "question": "Can you eliminate dust mites completely?",
     "answer": "Yes, our high-temperature washing and sanitizing heat treatment kills 99.9% of dust mites and allergens."
+  },
+  {
+    "question": "Can you clean feather or down comforters?",
+    "answer": "Yes, we handle both feather/down and synthetic-fill comforters with fabric-appropriate wash cycles to prevent clumping."
+  },
+  {
+    "question": "Do you offer pickup and delivery for bulky bedding items?",
+    "answer": "Yes, we offer pickup and delivery for bulky items like comforters and blankets. Just arrange it with us via WhatsApp."
   }
 ];
   const steps: { title: string; desc: string }[] = [
@@ -201,7 +209,7 @@ export default function BeddingCleaningPage() {
             Ready to Experience Freshly Cleaned Garments?
           </h2>
           <p className="text-blue-50 max-w-xl mx-auto text-base leading-relaxed">
-            Drop off your items at any outlet, or text us via WhatsApp to arrange a professional pickup.
+            Drop off your items at our outlet, or text us via WhatsApp to arrange a professional pickup.
           </p>
           <div className="flex justify-center gap-4">
             <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="white">

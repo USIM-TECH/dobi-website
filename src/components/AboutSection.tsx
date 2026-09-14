@@ -39,7 +39,7 @@ export default function AboutSection() {
               {/* Main Store Image */}
               <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl border border-gray-100">
                 <img
-                  src="/img/about-store-interior.png"
+                  src="/assets/about-store-interior.png"
                   alt="Dobi-Akasia Premium Garment Care Outlet"
                   className="w-full h-[380px] sm:h-[460px] md:h-[500px] lg:h-[540px] object-cover"
                   onError={(e) => {

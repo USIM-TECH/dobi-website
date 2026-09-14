@@ -43,17 +43,6 @@ export default function EnglishHomePage() {
 
   const serviceCards = [
     {
-      title: "Dry Cleaning",
-      description:
-        "Preserve delicate fabrics and formal suits with premium eco-solvents.",
-      icon: Shirt,
-      href: "/en/dry-cleaning",
-      badge: "Popular",
-      bg: "from-blue-50 to-blue-100/40",
-      glow: "bg-blue-200/50",
-      iconColor: "text-blue-600",
-    },
-    {
       title: "Laundry",
       description:
         "Freshly cleaned, perfectly folded, and pressed everyday clothing.",
@@ -63,6 +52,50 @@ export default function EnglishHomePage() {
       bg: "from-sky-50 to-sky-100/40",
       glow: "bg-sky-200/50",
       iconColor: "text-sky-600",
+    },
+    {
+      title: "Flat Work Ironer",
+      description:
+        "3-roller industrial ironer for bedsheets, tablecloths, and other large flat linens.",
+      icon: Layers,
+      href: "/en/flat-work-ironer",
+      badge: "3-Roller",
+      bg: "from-teal-50 to-teal-100/40",
+      glow: "bg-teal-200/50",
+      iconColor: "text-teal-600",
+    },
+    {
+      title: "Industry Dryer",
+      description:
+        "High-capacity 50kg dryer for bulk loads like comforters, curtains, and uniforms.",
+      icon: Wind,
+      href: "/en/industry-dryer",
+      badge: "50kg Capacity",
+      bg: "from-orange-50 to-orange-100/40",
+      glow: "bg-orange-200/50",
+      iconColor: "text-orange-600",
+    },
+    {
+      title: "Industry Washer",
+      description:
+        "Heavy-duty 50kg washer for large-volume linens, uniforms, and household loads.",
+      icon: Droplets,
+      href: "/en/industry-washer",
+      badge: "50kg Capacity",
+      bg: "from-cyan-50 to-cyan-100/40",
+      glow: "bg-cyan-200/50",
+      iconColor: "text-cyan-600",
+    },
+    {
+      title: "Dry Cleaning",
+      description:
+        "Preserve delicate fabrics and formal suits with premium eco-solvents.",
+      icon: Shirt,
+      href: "/en/dry-cleaning",
+      badge: "Popular",
+      bg: "from-blue-50 to-blue-100/40",
+      glow: "bg-blue-200/50",
+      iconColor: "text-blue-600",
     },
     {
       title: "Special Care",
@@ -119,39 +152,6 @@ export default function EnglishHomePage() {
       glow: "bg-indigo-200/50",
       iconColor: "text-indigo-600",
     },
-    {
-      title: "Flat Work Ironer",
-      description:
-        "3-roller industrial ironer for bedsheets, tablecloths, and other large flat linens.",
-      icon: Layers,
-      href: "/en/flat-work-ironer",
-      badge: "3-Roller",
-      bg: "from-teal-50 to-teal-100/40",
-      glow: "bg-teal-200/50",
-      iconColor: "text-teal-600",
-    },
-    {
-      title: "Industry Dryer",
-      description:
-        "High-capacity 50kg dryer for bulk loads like comforters, curtains, and uniforms.",
-      icon: Wind,
-      href: "/en/industry-dryer",
-      badge: "50kg Capacity",
-      bg: "from-orange-50 to-orange-100/40",
-      glow: "bg-orange-200/50",
-      iconColor: "text-orange-600",
-    },
-    {
-      title: "Industry Washer",
-      description:
-        "Heavy-duty 50kg washer for large-volume linens, uniforms, and household loads.",
-      icon: Droplets,
-      href: "/en/industry-washer",
-      badge: "50kg Capacity",
-      bg: "from-cyan-50 to-cyan-100/40",
-      glow: "bg-cyan-200/50",
-      iconColor: "text-cyan-600",
-    },
   ];
 
   const testimonials = [
@@ -206,7 +206,7 @@ export default function EnglishHomePage() {
         <div className="absolute right-0 top-0 bottom-0 w-[45vw] xl:w-[48vw] hidden lg:block z-0 pointer-events-none">
           <div className="relative h-full w-full">
             <Image
-              src="/img/hero-care-v1.webp"
+              src="/assets/hero-care-v1.webp"
               alt="A laundry care specialist returning freshly cleaned garments to a customer"
               fill
               priority
@@ -246,7 +246,7 @@ export default function EnglishHomePage() {
             {/* Mobile/Tablet Hero Image: relative below text, borderless, fading bottom to merge with UI */}
             <div className="relative col-span-1 lg:hidden w-full max-w-[620px] mx-auto mt-4 overflow-hidden">
               <Image
-                src="/img/hero-care-v1.webp"
+                src="/assets/hero-care-v1.webp"
                 alt="A laundry care specialist returning freshly cleaned garments to a customer"
                 width="1536"
                 height="1024"
@@ -271,7 +271,7 @@ export default function EnglishHomePage() {
             {
               icon: MessageCircle,
               title: "Drop off or WhatsApp us",
-              text: "Drop off at any outlet, or message us to arrange pickup",
+              text: "Drop off at our outlet, or message us to arrange pickup",
             },
             {
               icon: Sparkles,
@@ -281,7 +281,7 @@ export default function EnglishHomePage() {
             {
               icon: Clock,
               title: "Ready for pickup",
-              text: "Collect your freshly cleaned items at your chosen outlet",
+              text: "Collect your freshly cleaned items at our outlet",
             },
           ].map((step, index) => (
             <div
@@ -316,7 +316,7 @@ export default function EnglishHomePage() {
             <div className="absolute inset-0 bg-gradient-to-tr from-sky-100 to-emerald-50 rounded-[32px] transform translate-x-4 translate-y-4 -z-10" />
             <div className="relative w-full max-w-lg aspect-[4/5] rounded-[32px] overflow-hidden shadow-2xl border border-slate-100/50 group bg-white">
               <img
-                src="/img/dry.png"
+                src="/assets/dry.png"
                 alt="A Dobi Akasia specialist operating professional garment-care equipment"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 onError={(e) => {
