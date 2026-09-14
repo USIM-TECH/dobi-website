@@ -225,7 +225,7 @@ export default function EnglishHomePage() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-14">
             <div className="lg:col-span-6">
               <h1 className="max-w-3xl text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-dark-blue sm:text-5xl lg:text-6xl xl:text-[68px]">
-                Laundry cared for.
+                Laundry cared for
               </h1>
 
               <p className="mt-6 max-w-xl text-base font-medium leading-7 text-slate-600 sm:text-lg sm:leading-8">
@@ -352,10 +352,9 @@ export default function EnglishHomePage() {
                 Our business is engineered to support both large-scale
                 commercial clients and premium retail requirements, offering
                 custom bulk contracts that prioritize prompt turnaround times,
-                hygienic outcomes, and competitive cost efficiency. As a
-                trusted partner for regional institutions, we understand the
-                logistical requirements of institutional hygiene and linen
-                maintenance.
+                hygienic outcomes, and competitive cost efficiency. As a trusted
+                partner for regional institutions, we understand the logistical
+                requirements of institutional hygiene and linen maintenance.
               </p>
             </div>
 
@@ -411,10 +410,15 @@ export default function EnglishHomePage() {
       {/* Meet Our Team */}
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
-          <span className="text-primary font-bold text-sm tracking-widest uppercase">Our People</span>
-          <h2 className="text-3xl font-extrabold text-dark-blue leading-tight">Meet Our Team</h2>
+          <span className="text-primary font-bold text-sm tracking-widest uppercase">
+            Our People
+          </span>
+          <h2 className="text-3xl font-extrabold text-dark-blue leading-tight">
+            Meet Our Team
+          </h2>
           <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            The friendly faces behind Dobi Akasia, ready to take care of your laundry and answer your questions.
+            The friendly faces behind Dobi Akasia, ready to take care of your
+            laundry and answer your questions.
           </p>
 
           <div className="rounded-3xl border-2 border-dashed border-gray-200 bg-soft-bg aspect-video max-w-2xl mx-auto flex flex-col items-center justify-center gap-3 text-gray-400">
@@ -453,11 +457,20 @@ export default function EnglishHomePage() {
                 >
                   <div>
                     {/* Icon */}
-                    <div className={`h-40 flex items-center justify-center relative overflow-hidden bg-gradient-to-br ${service.bg}`}>
-                      <div className={`absolute -right-8 -top-8 w-32 h-32 rounded-full ${service.glow} blur-2xl`} />
-                      <div className={`absolute -left-10 -bottom-10 w-28 h-28 rounded-full ${service.glow} blur-2xl opacity-70`} />
+                    <div
+                      className={`h-40 flex items-center justify-center relative overflow-hidden bg-gradient-to-br ${service.bg}`}
+                    >
+                      <div
+                        className={`absolute -right-8 -top-8 w-32 h-32 rounded-full ${service.glow} blur-2xl`}
+                      />
+                      <div
+                        className={`absolute -left-10 -bottom-10 w-28 h-28 rounded-full ${service.glow} blur-2xl opacity-70`}
+                      />
                       <div className="relative w-20 h-20 rounded-full bg-white shadow-md flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                        <service.icon className={`w-9 h-9 ${service.iconColor}`} strokeWidth={1.75} />
+                        <service.icon
+                          className={`w-9 h-9 ${service.iconColor}`}
+                          strokeWidth={1.75}
+                        />
                       </div>
                       <span className="absolute top-3 right-3 bg-white/95 backdrop-blur-md text-[#152956] border border-slate-200/80 text-sm font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
                         {service.badge}
@@ -509,9 +522,9 @@ export default function EnglishHomePage() {
             </h2>
             <p className="text-gray-500 text-base mt-3 leading-relaxed">
               At Dobi Akasia, sustainability is integrated into the way we
-              operate. Through technology and responsible practices, we
-              strive to reduce our environmental impact while delivering
-              efficient and transparent laundry services.
+              operate. Through technology and responsible practices, we strive
+              to reduce our environmental impact while delivering efficient and
+              transparent laundry services.
             </p>
           </div>
 
@@ -524,11 +537,11 @@ export default function EnglishHomePage() {
                 Paperless by Design
               </h3>
               <p className="text-gray-500 text-base leading-relaxed">
-                Our in-house web and mobile system makes our laundry
-                operations paperless from start to finish — from checking
-                items received, tracking every service, confirming completed
-                laundry and generating digital invoices. Less paper, less
-                waste, and a smarter customer experience.
+                Our in-house web and mobile system makes our laundry operations
+                paperless from start to finish — from checking items received,
+                tracking every service, confirming completed laundry and
+                generating digital invoices. Less paper, less waste, and a
+                smarter customer experience.
               </p>
             </div>
 
@@ -540,9 +553,8 @@ export default function EnglishHomePage() {
                 Eco-Friendly Cleaning
               </h3>
               <p className="text-gray-500 text-base leading-relaxed">
-                We use eco-friendly cleaning chemicals as part of our
-                commitment to more responsible and sustainable laundry
-                practices.
+                We use eco-friendly cleaning chemicals as part of our commitment
+                to more responsible and sustainable laundry practices.
               </p>
             </div>
           </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Button from "@/components/Button";
@@ -8,6 +8,14 @@ import { CheckCircle2, Building, ShieldCheck, Mail, Phone, Users, GraduationCap,
 
 export default function CommercialPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formSubmitting, setFormSubmitting] = useState(false);
+  const [formError, setFormError] = useState("");
+  const b2bFormRef = useRef<HTMLFormElement>(null);
+
+  const handleSendAnotherInquiry = () => {
+    b2bFormRef.current?.reset();
+    setFormSubmitted(false);
+  };
 
   const sectors = [
     {
@@ -90,9 +98,39 @@ export default function CommercialPage() {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setFormSubmitted(true);
+    setFormError("");
+    setFormSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const payload = {
+      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "",
+      subject: "New B2B Quotation Request from Dobi Akasia Website",
+      ...Object.fromEntries(formData),
+    };
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+      const result = await res.json();
+
+      if (result.success) {
+        setFormSubmitted(true);
+      } else {
+        setFormError("Something went wrong. Please try again or WhatsApp us directly.");
+      }
+    } catch {
+      setFormError("Something went wrong. Please try again or WhatsApp us directly.");
+    } finally {
+      setFormSubmitting(false);
+    }
   };
 
   return (
@@ -321,45 +359,59 @@ export default function CommercialPage() {
           </div>
 
           {/* Form Inquiry */}
-          <div id="inquiry" className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 space-y-6">
+          <div id="inquiry" className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col">
             <div className="text-center">
               <h3 className="text-2xl font-extrabold text-dark-blue">Request B2B Quotation</h3>
               <p className="text-gray-500 text-sm mt-1">Submit details and receive a customized contract proposal within 24 hours.</p>
             </div>
 
-            {formSubmitted ? (
-              <div className="p-8 text-center bg-lime/10 border border-lime/20 rounded-2xl space-y-3">
-                <CheckCircle2 className="w-12 h-12 text-lime mx-auto" />
-                <h4 className="font-bold text-dark-blue text-lg">Thank You!</h4>
-                <p className="text-gray-600 text-base">Your corporate inquiry has been logged. A B2B executive will contact you shortly.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="relative flex-1 mt-6">
+              {formSubmitted && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center bg-lime/10 border border-lime/20 rounded-2xl space-y-3 p-8">
+                  <CheckCircle2 className="w-12 h-12 text-lime" />
+                  <h4 className="font-bold text-dark-blue text-lg">Thank You!</h4>
+                  <p className="text-gray-600 text-base">Your corporate inquiry has been logged. A B2B executive will contact you shortly.</p>
+                  <button
+                    type="button"
+                    onClick={handleSendAnotherInquiry}
+                    className="text-primary font-bold text-sm hover:text-primary-dark transition-colors underline underline-offset-2 pt-2 cursor-pointer"
+                  >
+                    Submit Another Inquiry
+                  </button>
+                </div>
+              )}
+
+              <form
+                ref={b2bFormRef}
+                onSubmit={handleSubmit}
+                aria-hidden={formSubmitted}
+                className={`space-y-4 ${formSubmitted ? "invisible" : ""}`}
+              >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
                     <label className="text-sm font-bold text-dark-blue block">Company Name</label>
-                    <input type="text" required placeholder="e.g. Acme Hotel" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                    <input name="company_name" type="text" required placeholder="e.g. Acme Hotel" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
                   </div>
                   <div className="space-y-1">
                     <label className="text-sm font-bold text-dark-blue block">Contact Person</label>
-                    <input type="text" required placeholder="e.g. John Doe" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                    <input name="contact_person" type="text" required placeholder="e.g. John Doe" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
                     <label className="text-sm font-bold text-dark-blue block">Work Email</label>
-                    <input type="email" required placeholder="john@company.com" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                    <input name="email" type="email" required placeholder="john@company.com" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
                   </div>
                   <div className="space-y-1">
                     <label className="text-sm font-bold text-dark-blue block">Phone Number</label>
-                    <input type="tel" required placeholder="e.g. 012-3456789" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                    <input name="phone" type="tel" required placeholder="e.g. 012-3456789" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
                   </div>
                 </div>
 
                 <div className="space-y-1">
                   <label className="text-sm font-bold text-dark-blue block">Business Sector</label>
-                  <select className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary">
+                  <select name="business_sector" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary">
                     <option>Hotel & Airbnb</option>
                     <option>Spa & Wellness Salon</option>
                     <option>Restaurant & F&B</option>
@@ -370,14 +422,18 @@ export default function CommercialPage() {
 
                 <div className="space-y-1">
                   <label className="text-sm font-bold text-dark-blue block">Estimated Monthly Volume</label>
-                  <textarea rows={3} required placeholder="e.g. Washing about 200kg towels per week" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                  <textarea name="estimated_volume" rows={3} required placeholder="e.g. Washing about 200kg towels per week" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
                 </div>
 
-                <button type="submit" className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-xl shadow-md transition-colors cursor-pointer text-base">
-                  Submit Inquiry
+                {formError && (
+                  <p className="text-red-600 text-sm font-semibold text-center">{formError}</p>
+                )}
+
+                <button type="submit" disabled={formSubmitting} className="w-full bg-primary hover:bg-primary-dark disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-3 rounded-xl shadow-md transition-colors cursor-pointer text-base">
+                  {formSubmitting ? "Submitting..." : "Submit Inquiry"}
                 </button>
               </form>
-            )}
+            </div>
           </div>
         </div>
       </section>

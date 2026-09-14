@@ -78,7 +78,7 @@ export default function Footer() {
               <li className="flex gap-2.5 items-start">
                 <MapPin className="w-4.5 h-4.5 text-[#1d6ff0] shrink-0 mt-0.5" />
                 <address className="not-italic text-slate-300">
-                  Operational Headquarters: B8-G, Ground Floor, Acacia Avenue, Jalan Jati 9, 71800 Nilai, Negeri Sembilan
+                  B8-G, Ground Floor, Acacia Avenue, Jalan Jati 9, 71800 Nilai, Negeri Sembilan
                 </address>
               </li>
               <li>
