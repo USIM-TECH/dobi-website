@@ -9,14 +9,8 @@ import FaqAccordion from "@/components/FaqAccordion";
 export default function CarpetCleaningPage() {
   const title = "Carpet Cleaning Service";
   const intro = "Deep extraction cleaning that penetrates below the surface. We remove accumulated dirt, pet hair, odours, and stains from carpets, rugs, and doormats to keep your floors clean.";
-  const startPrice = "Starts From RM50";
   
-  const prices: { item: string; price: string }[] = [
-  {
-    "item": "Carpet & Rug Cleaning",
-    "price": "Starts From RM50"
-  }
-];
+  const prices: { item: string; price: string }[] = [];
   const faqs: { question: string; answer: string }[] = [
   {
     "question": "What types of carpets do you clean?",
@@ -76,9 +70,6 @@ export default function CarpetCleaningPage() {
               {intro}
             </p>
             <div className="flex flex-wrap gap-4 items-center pt-2">
-              <span className="text-base font-semibold text-gray-600 bg-gray-100/80 border border-gray-200/60 px-4 py-2 rounded-full">
-                Price: <strong className="text-primary font-semibold">{startPrice}</strong>
-              </span>
               <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="lime">
                 WhatsApp Us
               </Button>

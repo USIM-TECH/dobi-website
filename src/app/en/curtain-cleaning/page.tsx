@@ -9,14 +9,8 @@ import FaqAccordion from "@/components/FaqAccordion";
 export default function CurtainCleaningPage() {
   const title = "Curtain Cleaning Service";
   const intro = "Refresh your home atmosphere with our professional curtain cleaning. We offer complete support, including free removal and installation assistance, ensuring a stress-free process.";
-  const startPrice = "Starts From RM25";
   
-  const prices: { item: string; price: string }[] = [
-  {
-    "item": "Curtain Cleaning",
-    "price": "Starts From RM25"
-  }
-];
+  const prices: { item: string; price: string }[] = [];
   const faqs: { question: string; answer: string }[] = [
   {
     "question": "Do you offer removal & installation assistance?",
@@ -76,9 +70,6 @@ export default function CurtainCleaningPage() {
               {intro}
             </p>
             <div className="flex flex-wrap gap-4 items-center pt-2">
-              <span className="text-base font-semibold text-gray-600 bg-gray-100/80 border border-gray-200/60 px-4 py-2 rounded-full">
-                Price: <strong className="text-primary font-semibold">{startPrice}</strong>
-              </span>
               <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="lime">
                 WhatsApp Us
               </Button>

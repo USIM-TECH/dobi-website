@@ -9,30 +9,8 @@ import FaqAccordion from "@/components/FaqAccordion";
 export default function BeddingCleaningPage() {
   const title = "Bedding Cleaning Service";
   const intro = "Deep sanitization and washing for your comforters, blankets, and pillows. We eliminate dust mites, allergens, and perspiration marks to give you a refreshing, hygienic sleep.";
-  const startPrice = "Starts From RM30";
   
-  const prices: { item: string; price: string }[] = [
-  {
-    "item": "Comforter",
-    "price": "RM30"
-  },
-  {
-    "item": "Blanket",
-    "price": "RM30"
-  },
-  {
-    "item": "Pillow",
-    "price": "RM30"
-  },
-  {
-    "item": "Bolster",
-    "price": "RM30"
-  },
-  {
-    "item": "Mattress Protector",
-    "price": "RM20/kg"
-  }
-];
+  const prices: { item: string; price: string }[] = [];
   const faqs: { question: string; answer: string }[] = [
   {
     "question": "How long does bedding cleaning take?",
@@ -92,9 +70,6 @@ export default function BeddingCleaningPage() {
               {intro}
             </p>
             <div className="flex flex-wrap gap-4 items-center pt-2">
-              <span className="text-base font-semibold text-gray-600 bg-gray-100/80 border border-gray-200/60 px-4 py-2 rounded-full">
-                Price: <strong className="text-primary font-semibold">{startPrice}</strong>
-              </span>
               <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="lime">
                 WhatsApp Us
               </Button>

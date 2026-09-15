@@ -9,38 +9,8 @@ import FaqAccordion from "@/components/FaqAccordion";
 export default function DryCleaningPage() {
   const title = "Dry Cleaning Service";
   const intro = "Preserve your delicate garments and formal wear with our professional dry cleaning service. We use premium eco-friendly solvents that protect fibers while removing tough stains and odours.";
-  const startPrice = "RM12/pc";
   
-  const prices: { item: string; price: string }[] = [
-  {
-    "item": "Shirts",
-    "price": "RM12/pc"
-  },
-  {
-    "item": "Trouser",
-    "price": "RM12/pc"
-  },
-  {
-    "item": "Coat",
-    "price": "RM24/pc"
-  },
-  {
-    "item": "Suit (2 pcs)",
-    "price": "RM36/pc"
-  },
-  {
-    "item": "Dress",
-    "price": "STARTS FROM RM24/pc"
-  },
-  {
-    "item": "Winter Jacket",
-    "price": "STARTS FROM RM30/pc"
-  },
-  {
-    "item": "Wedding Gown",
-    "price": "Quotation Required"
-  }
-];
+  const prices: { item: string; price: string }[] = [];
   const faqs: { question: string; answer: string }[] = [
   {
     "question": "What is dry cleaning?",
@@ -100,9 +70,6 @@ export default function DryCleaningPage() {
               {intro}
             </p>
             <div className="flex flex-wrap gap-4 items-center pt-2">
-              <span className="text-base font-semibold text-gray-600 bg-gray-100/80 border border-gray-200/60 px-4 py-2 rounded-full">
-                Price: <strong className="text-primary font-semibold">{startPrice}</strong>
-              </span>
               <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="lime">
                 WhatsApp Us
               </Button>

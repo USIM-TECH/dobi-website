@@ -489,7 +489,7 @@ export default function EnglishHomePage() {
 
                   <div className="px-6 pb-6 pt-2">
                     <div className="flex items-center justify-between text-sm font-bold text-primary pt-3 border-t border-gray-100 group-hover:text-primary-dark">
-                      <span>View Pricing & FAQs</span>
+                      <span>View Details & FAQs</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>

@@ -96,7 +96,7 @@ export default function ContactPage() {
             We’re Ready To Serve You
           </h2>
           <p className="text-gray-500 leading-relaxed">
-            Whether you want verify cleaning rates, or book a service, our
+            Whether you want to book a service or ask about our process, our
             customer support team is happy to help.
           </p>
 
