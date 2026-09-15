@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-outfit), sans-serif;
+  /* Native system UI stack - the typeface used in the Instagram/Meta reference. */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   
   --color-primary: #1fb3e8;
   --color-primary-dark: #0083b2;

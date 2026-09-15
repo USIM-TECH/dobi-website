@@ -141,7 +141,7 @@ export default function CommercialPage() {
       <section className="bg-gradient-to-r from-blue-50 to-white pt-36 pb-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           <div className="space-y-6">
-            <span className="text-primary font-bold text-base tracking-widest uppercase">B2B Laundry</span>
+            <span className="text-primary font-bold text-lg tracking-widest uppercase">B2B Laundry</span>
             <h1 className="text-4xl md:text-5xl font-extrabold text-dark-blue leading-tight">
               Premium Commercial Laundry Solutions
             </h1>
@@ -175,7 +175,7 @@ export default function CommercialPage() {
             <h2 className="text-4xl md:text-5xl font-extrabold text-dark-blue leading-tight">
               Why <span className="text-primary">choose us</span>
             </h2>
-            <p className="text-gray-500 text-base mt-4 leading-relaxed">
+            <p className="text-gray-500 text-lg mt-4 leading-relaxed">
               We provide specialized fabric and linen maintenance designed to fulfill stringent commercial and hospitality industry criteria.
             </p>
           </div>
@@ -192,7 +192,7 @@ export default function CommercialPage() {
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="text-lg font-bold text-dark-blue mb-3 uppercase tracking-wide">{item.title}</h3>
-                  <p className="text-gray-500 text-base leading-relaxed">{item.desc}</p>
+                  <p className="text-gray-500 text-lg leading-relaxed">{item.desc}</p>
                 </div>
               );
             })}
@@ -204,11 +204,11 @@ export default function CommercialPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="text-primary font-bold text-base tracking-widest uppercase">Sectors We Serve</span>
+            <span className="text-primary font-bold text-lg tracking-widest uppercase">Sectors We Serve</span>
             <h2 className="text-3xl font-extrabold text-dark-blue mt-2">
               Tailored Garment Care for Businesses
             </h2>
-            <p className="text-gray-500 text-base mt-2">
+            <p className="text-gray-500 text-lg mt-2">
               We understand that every business has distinct hygiene guidelines. Check our customized treatments.
             </p>
           </div>
@@ -224,7 +224,7 @@ export default function CommercialPage() {
                     <Building className="w-6 h-6" />
                   </div>
                   <h3 className="text-lg font-bold text-dark-blue mb-3">{sec.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{sec.desc}</p>
+                  <p className="text-gray-500 text-base leading-relaxed">{sec.desc}</p>
                 </div>
               </div>
             ))}
@@ -236,11 +236,11 @@ export default function CommercialPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-primary font-bold text-base tracking-widest uppercase">Corporate Packages</span>
+            <span className="text-primary font-bold text-lg tracking-widest uppercase">Corporate Packages</span>
             <h2 className="text-3xl font-extrabold text-dark-blue mt-2">
               Custom SLAs Built Around Your Usage Cycles
             </h2>
-            <p className="text-gray-500 text-base mt-3 leading-relaxed">
+            <p className="text-gray-500 text-lg mt-3 leading-relaxed">
               Dobi Akasia offers custom Service Level Agreements (SLAs) tailored around your usage cycles. Our corporate client system incorporates scheduled pickups, prompt processing, structured billing accounts, and dedicated account supervision to secure flawless supply chain continuity.
             </p>
           </div>
@@ -260,7 +260,7 @@ export default function CommercialPage() {
                   <div className="w-full h-px bg-gray-200 mb-4" />
                   <ul className="space-y-3">
                     {pkg.items.map((item, i) => (
-                      <li key={i} className="flex gap-3 items-start text-base text-gray-600">
+                      <li key={i} className="flex gap-3 items-start text-lg text-gray-600">
                         <CheckCircle2 className="w-4.5 h-4.5 text-lime flex-shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </li>
@@ -278,7 +278,7 @@ export default function CommercialPage() {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
           <div className="space-y-10">
             <div>
-              <span className="text-primary font-bold text-base tracking-widest uppercase">Value Proposition</span>
+              <span className="text-primary font-bold text-lg tracking-widest uppercase">Value Proposition</span>
               <h2 className="text-3xl font-extrabold text-dark-blue mt-2 leading-tight">
                 Why Businesses Trust Dobi Akasia
               </h2>
@@ -294,7 +294,7 @@ export default function CommercialPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-dark-blue mb-1">{vp.title}</h3>
-                      <p className="text-gray-500 text-base leading-relaxed">{vp.desc}</p>
+                      <p className="text-gray-500 text-lg leading-relaxed">{vp.desc}</p>
                     </div>
                   </div>
                 );
@@ -307,7 +307,7 @@ export default function CommercialPage() {
               aria-hidden="true"
               className="pointer-events-none absolute -bottom-16 -right-16 size-56 rounded-full bg-primary/20 blur-3xl"
             />
-            <span className="text-primary font-bold text-base tracking-widest uppercase relative">Trusted Partner</span>
+            <span className="text-primary font-bold text-lg tracking-widest uppercase relative">Trusted Partner</span>
             <p className="text-white text-2xl font-extrabold leading-snug mt-3 relative">
               Over a decade of proven fabric care, built for institutional scale.
             </p>
@@ -315,15 +315,15 @@ export default function CommercialPage() {
             <div className="grid grid-cols-3 gap-6 mt-10 pt-8 border-t border-white/10 relative">
               <div>
                 <div className="text-3xl font-extrabold text-white">10+</div>
-                <div className="text-sm text-slate-300 mt-1">Years Experience</div>
+                <div className="text-base text-slate-300 mt-1">Years Experience</div>
               </div>
               <div>
                 <div className="text-3xl font-extrabold text-white">100%</div>
-                <div className="text-sm text-slate-300 mt-1">Sanitized Cycles</div>
+                <div className="text-base text-slate-300 mt-1">Sanitized Cycles</div>
               </div>
               <div>
                 <div className="text-3xl font-extrabold text-white">24h</div>
-                <div className="text-sm text-slate-300 mt-1">Turnaround Ready</div>
+                <div className="text-base text-slate-300 mt-1">Turnaround Ready</div>
               </div>
             </div>
           </div>
@@ -334,7 +334,7 @@ export default function CommercialPage() {
       <section className="py-20 bg-soft-bg">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
           <div className="space-y-6">
-            <span className="text-primary font-bold text-base tracking-widest uppercase">Features</span>
+            <span className="text-primary font-bold text-lg tracking-widest uppercase">Features</span>
             <h2 className="text-3xl font-extrabold text-dark-blue leading-tight">
               Why Partner with Dobi Akasia B2B?
             </h2>
@@ -350,7 +350,7 @@ export default function CommercialPage() {
                 "High-temperature disinfection protocols for hygiene",
                 "Transparent invoicing and competitive wholesale pricing",
               ].map((f, i) => (
-                <li key={i} className="flex gap-3 items-center text-base text-gray-600">
+                <li key={i} className="flex gap-3 items-center text-lg text-gray-600">
                   <CheckCircle2 className="w-5 h-5 text-lime flex-shrink-0" />
                   <span>{f}</span>
                 </li>
@@ -362,7 +362,7 @@ export default function CommercialPage() {
           <div id="inquiry" className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col">
             <div className="text-center">
               <h3 className="text-2xl font-extrabold text-dark-blue">Request B2B Quotation</h3>
-              <p className="text-gray-500 text-sm mt-1">Submit details and receive a customized contract proposal within 24 hours.</p>
+              <p className="text-gray-500 text-base mt-1">Submit details and receive a customized contract proposal within 24 hours.</p>
             </div>
 
             <div className="relative flex-1 mt-6">
@@ -370,11 +370,11 @@ export default function CommercialPage() {
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center bg-lime/10 border border-lime/20 rounded-2xl space-y-3 p-8">
                   <CheckCircle2 className="w-12 h-12 text-lime" />
                   <h4 className="font-bold text-dark-blue text-lg">Thank You!</h4>
-                  <p className="text-gray-600 text-base">Your corporate inquiry has been logged. A B2B executive will contact you shortly.</p>
+                  <p className="text-gray-600 text-lg">Your corporate inquiry has been logged. A B2B executive will contact you shortly.</p>
                   <button
                     type="button"
                     onClick={handleSendAnotherInquiry}
-                    className="text-primary font-bold text-sm hover:text-primary-dark transition-colors underline underline-offset-2 pt-2 cursor-pointer"
+                    className="text-primary font-bold text-base hover:text-primary-dark transition-colors underline underline-offset-2 pt-2 cursor-pointer"
                   >
                     Submit Another Inquiry
                   </button>
@@ -389,29 +389,29 @@ export default function CommercialPage() {
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-sm font-bold text-dark-blue block">Company Name</label>
-                    <input name="company_name" type="text" required placeholder="e.g. Acme Hotel" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                    <label className="text-base font-bold text-dark-blue block">Company Name</label>
+                    <input name="company_name" type="text" required placeholder="e.g. Acme Hotel" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-lg focus:outline-none focus:border-primary" />
                   </div>
                   <div className="space-y-1">
-                    <label className="text-sm font-bold text-dark-blue block">Contact Person</label>
-                    <input name="contact_person" type="text" required placeholder="e.g. John Doe" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                    <label className="text-base font-bold text-dark-blue block">Contact Person</label>
+                    <input name="contact_person" type="text" required placeholder="e.g. John Doe" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-lg focus:outline-none focus:border-primary" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-sm font-bold text-dark-blue block">Work Email</label>
-                    <input name="email" type="email" required placeholder="john@company.com" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                    <label className="text-base font-bold text-dark-blue block">Work Email</label>
+                    <input name="email" type="email" required placeholder="john@company.com" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-lg focus:outline-none focus:border-primary" />
                   </div>
                   <div className="space-y-1">
-                    <label className="text-sm font-bold text-dark-blue block">Phone Number</label>
-                    <input name="phone" type="tel" required placeholder="e.g. 012-3456789" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                    <label className="text-base font-bold text-dark-blue block">Phone Number</label>
+                    <input name="phone" type="tel" required placeholder="e.g. 012-3456789" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-lg focus:outline-none focus:border-primary" />
                   </div>
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-sm font-bold text-dark-blue block">Business Sector</label>
-                  <select name="business_sector" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary">
+                  <label className="text-base font-bold text-dark-blue block">Business Sector</label>
+                  <select name="business_sector" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-lg focus:outline-none focus:border-primary">
                     <option>Hotel & Airbnb</option>
                     <option>Spa & Wellness Salon</option>
                     <option>Restaurant & F&B</option>
@@ -421,15 +421,15 @@ export default function CommercialPage() {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-sm font-bold text-dark-blue block">Estimated Monthly Volume</label>
-                  <textarea name="estimated_volume" rows={3} required placeholder="e.g. Washing about 200kg towels per week" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                  <label className="text-base font-bold text-dark-blue block">Estimated Monthly Volume</label>
+                  <textarea name="estimated_volume" rows={3} required placeholder="e.g. Washing about 200kg towels per week" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-lg focus:outline-none focus:border-primary" />
                 </div>
 
                 {formError && (
-                  <p className="text-red-600 text-sm font-semibold text-center">{formError}</p>
+                  <p className="text-red-600 text-base font-semibold text-center">{formError}</p>
                 )}
 
-                <button type="submit" disabled={formSubmitting} className="w-full bg-primary hover:bg-primary-dark disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-3 rounded-xl shadow-md transition-colors cursor-pointer text-base">
+                <button type="submit" disabled={formSubmitting} className="w-full bg-primary hover:bg-primary-dark disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-3 rounded-xl shadow-md transition-colors cursor-pointer text-lg">
                   {formSubmitting ? "Submitting..." : "Submit Inquiry"}
                 </button>
               </form>

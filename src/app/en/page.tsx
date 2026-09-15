@@ -228,7 +228,7 @@ export default function EnglishHomePage() {
                 Laundry cared for
               </h1>
 
-              <p className="mt-6 max-w-xl text-base font-medium leading-7 text-slate-600 sm:text-lg sm:leading-8">
+              <p className="mt-6 max-w-xl text-lg font-medium leading-7 text-slate-600 sm:text-lg sm:leading-8">
                 We make professional garment care simple, transparent, and easy
                 to fit into your day.
               </p>
@@ -236,7 +236,7 @@ export default function EnglishHomePage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <a
                   href="#services"
-                  className="inline-flex min-h-14 items-center justify-center rounded-full border-2 border-slate-200 bg-white/80 px-7 py-4 text-base font-extrabold text-dark-blue shadow-sm backdrop-blur transition hover:border-[#1d6ff0] hover:text-[#1d6ff0] focus:outline-none focus:ring-4 focus:ring-blue-100"
+                  className="inline-flex min-h-14 items-center justify-center rounded-full border-2 border-slate-200 bg-white/80 px-7 py-4 text-lg font-extrabold text-dark-blue shadow-sm backdrop-blur transition hover:border-[#1d6ff0] hover:text-[#1d6ff0] focus:outline-none focus:ring-4 focus:ring-blue-100"
                 >
                   View services & prices
                 </a>
@@ -292,10 +292,10 @@ export default function EnglishHomePage() {
                 <step.icon className="h-5 w-5" />
               </span>
               <div>
-                <h2 className="text-base font-semibold text-dark-blue">
+                <h2 className="text-lg font-semibold text-dark-blue">
                   {step.title}
                 </h2>
-                <p className="mt-0.5 text-sm font-semibold text-slate-500">
+                <p className="mt-0.5 text-base font-semibold text-slate-500">
                   {step.text}
                 </p>
               </div>
@@ -331,7 +331,7 @@ export default function EnglishHomePage() {
           {/* Right Column - Text & 3 Key Cards */}
           <div className="lg:col-span-7 space-y-8 text-left">
             <div className="space-y-4">
-              <span className="text-primary font-semibold text-sm tracking-widest uppercase block">
+              <span className="text-primary font-semibold text-base tracking-widest uppercase block">
                 About Dobi-Akasia
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-dark-blue leading-tight tracking-tight">
@@ -339,7 +339,7 @@ export default function EnglishHomePage() {
               </h2>
             </div>
 
-            <div className="space-y-4 text-gray-650 text-base md:text-base font-medium leading-relaxed max-w-2xl">
+            <div className="space-y-4 text-gray-650 text-lg md:text-lg font-medium leading-relaxed max-w-2xl">
               <p>
                 Established in 2012, Dobi Akasia has grown to become a premier
                 laundry service provider specializing in comprehensive,
@@ -393,10 +393,10 @@ export default function EnglishHomePage() {
                     <item.icon className="h-5 w-5" />
                   </span>
                   <div>
-                    <h4 className="font-bold text-dark-blue text-base tracking-tight">
+                    <h4 className="font-bold text-dark-blue text-lg tracking-tight">
                       {item.title}
                     </h4>
-                    <p className="text-gray-500 text-sm mt-1.5 leading-relaxed">
+                    <p className="text-gray-500 text-base mt-1.5 leading-relaxed">
                       {item.text}
                     </p>
                   </div>
@@ -410,7 +410,7 @@ export default function EnglishHomePage() {
       {/* Meet Our Team */}
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
-          <span className="text-primary font-bold text-sm tracking-widest uppercase">
+          <span className="text-primary font-bold text-base tracking-widest uppercase">
             Our People
           </span>
           <h2 className="text-3xl font-extrabold text-dark-blue leading-tight">
@@ -423,7 +423,7 @@ export default function EnglishHomePage() {
 
           <div className="rounded-3xl border-2 border-dashed border-gray-200 bg-soft-bg aspect-video max-w-2xl mx-auto flex flex-col items-center justify-center gap-3 text-gray-400">
             <Users className="w-10 h-10" />
-            <p className="text-sm font-semibold">Team photo coming soon</p>
+            <p className="text-base font-semibold">Team photo coming soon</p>
           </div>
         </div>
       </section>
@@ -435,13 +435,13 @@ export default function EnglishHomePage() {
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-primary font-extrabold text-sm tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
+            <span className="text-primary font-extrabold text-base tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
               Our Services
             </span>
             <h2 className="text-3xl md:text-4xl font-semibold text-dark-blue tracking-tight">
               Everything you need, cared for properly
             </h2>
-            <p className="text-gray-500 text-base mt-3 leading-relaxed">
+            <p className="text-gray-500 text-lg mt-3 leading-relaxed">
               We process everyday garments, luxury attire, home items, and
               special care cleaning with strict quality controls.
             </p>
@@ -472,7 +472,7 @@ export default function EnglishHomePage() {
                           strokeWidth={1.75}
                         />
                       </div>
-                      <span className="absolute top-3 right-3 bg-white/95 backdrop-blur-md text-[#152956] border border-slate-200/80 text-sm font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
+                      <span className="absolute top-3 right-3 bg-white/95 backdrop-blur-md text-[#152956] border border-slate-200/80 text-base font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
                         {service.badge}
                       </span>
                     </div>
@@ -481,14 +481,14 @@ export default function EnglishHomePage() {
                       <h3 className="text-lg font-extrabold text-dark-blue mb-2 group-hover:text-primary transition-colors">
                         {service.title}
                       </h3>
-                      <p className="text-gray-500 text-sm leading-relaxed">
+                      <p className="text-gray-500 text-base leading-relaxed">
                         {service.description}
                       </p>
                     </div>
                   </div>
 
                   <div className="px-6 pb-6 pt-2">
-                    <div className="flex items-center justify-between text-sm font-bold text-primary pt-3 border-t border-gray-100 group-hover:text-primary-dark">
+                    <div className="flex items-center justify-between text-base font-bold text-primary pt-3 border-t border-gray-100 group-hover:text-primary-dark">
                       <span>View Details & FAQs</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -502,7 +502,7 @@ export default function EnglishHomePage() {
               type="button"
               onClick={() => setShowAllServices((current) => !current)}
               aria-expanded={showAllServices}
-              className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-[#1d6ff0] bg-white px-7 py-3 text-base font-extrabold text-[#1d6ff0] transition hover:bg-[#1d6ff0] hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-100"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-[#1d6ff0] bg-white px-7 py-3 text-lg font-extrabold text-[#1d6ff0] transition hover:bg-[#1d6ff0] hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-100"
             >
               {showAllServices ? "Show fewer services" : "View all 10 services"}
             </button>
@@ -514,13 +514,13 @@ export default function EnglishHomePage() {
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-primary font-extrabold text-sm tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
+            <span className="text-primary font-extrabold text-base tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
               Our Commitment to Sustainability
             </span>
             <h2 className="text-3xl md:text-4xl font-semibold text-dark-blue tracking-tight">
               Smarter Laundry. Greener Future.
             </h2>
-            <p className="text-gray-500 text-base mt-3 leading-relaxed">
+            <p className="text-gray-500 text-lg mt-3 leading-relaxed">
               At Dobi Akasia, sustainability is integrated into the way we
               operate. Through technology and responsible practices, we strive
               to reduce our environmental impact while delivering efficient and
@@ -536,7 +536,7 @@ export default function EnglishHomePage() {
               <h3 className="text-lg font-extrabold text-dark-blue">
                 Paperless by Design
               </h3>
-              <p className="text-gray-500 text-base leading-relaxed">
+              <p className="text-gray-500 text-lg leading-relaxed">
                 Our in-house web and mobile system makes our laundry operations
                 paperless from start to finish — from checking items received,
                 tracking every service, confirming completed laundry and
@@ -552,7 +552,7 @@ export default function EnglishHomePage() {
               <h3 className="text-lg font-extrabold text-dark-blue">
                 Eco-Friendly Cleaning
               </h3>
-              <p className="text-gray-500 text-base leading-relaxed">
+              <p className="text-gray-500 text-lg leading-relaxed">
                 We use eco-friendly cleaning chemicals as part of our commitment
                 to more responsible and sustainable laundry practices.
               </p>
@@ -567,7 +567,7 @@ export default function EnglishHomePage() {
         aria-labelledby="testimonials-heading"
       >
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <span className="text-primary font-extrabold text-sm tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
+          <span className="text-primary font-extrabold text-base tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
             Testimonials
           </span>
           <h2
@@ -606,7 +606,7 @@ export default function EnglishHomePage() {
                       ))}
                     </div>
 
-                    <p className="text-gray-700 text-base md:text-lg font-medium italic leading-relaxed">
+                    <p className="text-gray-700 text-lg md:text-lg font-medium italic leading-relaxed">
                       &quot;{item.text}&quot;
                     </p>
 
@@ -618,10 +618,10 @@ export default function EnglishHomePage() {
                         {item.name.charAt(0).toUpperCase()}
                       </div>
                       <div className="text-left">
-                        <h3 className="font-extrabold text-dark-blue text-base leading-none">
+                        <h3 className="font-extrabold text-dark-blue text-lg leading-none">
                           {item.name}
                         </h3>
-                        <span className="text-sm font-semibold text-slate-500 block mt-1">
+                        <span className="text-base font-semibold text-slate-500 block mt-1">
                           {item.role}
                         </span>
                       </div>
@@ -637,7 +637,7 @@ export default function EnglishHomePage() {
             <div className="mt-8 flex justify-center">
               <Link
                 href="/en/testimonial"
-                className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline"
+                className="inline-flex items-center gap-2 text-base font-bold text-primary hover:underline"
               >
                 Read All 12 Google Reviews{" "}
                 <ArrowRight className="w-3.5 h-3.5" />

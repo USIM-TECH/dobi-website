@@ -56,13 +56,13 @@ export default function LaundryPage() {
       <section className="bg-gradient-to-r from-blue-50 to-white pt-36 pb-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           <div className="space-y-6">
-            <span className="text-primary font-extrabold text-sm tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block">
+            <span className="text-primary font-extrabold text-base tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block">
               Our Services
             </span>
             <h1 className="text-4xl md:text-5xl font-semibold text-dark-blue leading-tight tracking-tight">
               {title}
             </h1>
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+            <p className="text-gray-600 text-lg md:text-lg leading-relaxed">
               {intro}
             </p>
             <div className="flex flex-wrap gap-4 items-center pt-2">
@@ -90,13 +90,13 @@ export default function LaundryPage() {
         <section className="py-20 bg-soft-bg">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-xl mx-auto mb-16">
-              <span className="text-primary font-extrabold text-sm tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
+              <span className="text-primary font-extrabold text-base tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
                 Price List
               </span>
               <h2 className="text-3xl font-semibold text-dark-blue tracking-tight">
                 {title} Price Guide
               </h2>
-              <p className="text-gray-500 text-base mt-2">
+              <p className="text-gray-500 text-lg mt-2">
                 Simple, transparent pricing. No hidden fees. Check our standard rates.
               </p>
             </div>
@@ -107,7 +107,7 @@ export default function LaundryPage() {
                   key={index}
                   className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-primary hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
                 >
-                  <h3 className="font-extrabold text-dark-blue text-base mb-4">{p.item}</h3>
+                  <h3 className="font-extrabold text-dark-blue text-lg mb-4">{p.item}</h3>
                   <div className="text-right pt-4 border-t border-gray-50">
                     <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider block">Standard Rate</span>
                     <span className="text-xl font-semibold text-primary">{p.price}</span>
@@ -123,13 +123,13 @@ export default function LaundryPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="text-primary font-extrabold text-sm tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
+            <span className="text-primary font-extrabold text-base tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
               Our Process
             </span>
             <h2 className="text-3xl font-semibold text-dark-blue tracking-tight">
               How We Clean Your Items
             </h2>
-            <p className="text-gray-500 text-base mt-2">
+            <p className="text-gray-500 text-lg mt-2">
               Our professional cleaning facility operates under strict hygienic standards and procedures.
             </p>
           </div>
@@ -141,8 +141,8 @@ export default function LaundryPage() {
                   <div className="text-4xl font-semibold text-gray-200 group-hover:text-primary transition-colors mb-3">
                     0{index + 1}
                   </div>
-                  <h3 className="font-extrabold text-dark-blue text-base leading-snug mb-2">{step.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">
+                  <h3 className="font-extrabold text-dark-blue text-lg leading-snug mb-2">{step.title}</h3>
+                  <p className="text-gray-500 text-base leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -157,13 +157,13 @@ export default function LaundryPage() {
         <section className="py-20 bg-soft-bg border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-xl mx-auto mb-16">
-              <span className="text-primary font-extrabold text-sm tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
+              <span className="text-primary font-extrabold text-base tracking-widest uppercase bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
                 FAQ
               </span>
               <h2 className="text-3xl font-semibold text-dark-blue tracking-tight">
                 Frequently Asked Questions
               </h2>
-              <p className="text-gray-500 text-base mt-2">
+              <p className="text-gray-500 text-lg mt-2">
                 Have questions about our {title} service? Check out our helpful answers.
               </p>
             </div>
@@ -179,7 +179,7 @@ export default function LaundryPage() {
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
             Ready to Experience Freshly Cleaned Garments?
           </h2>
-          <p className="text-blue-50 max-w-xl mx-auto text-base leading-relaxed">
+          <p className="text-blue-50 max-w-xl mx-auto text-lg leading-relaxed">
             Drop off your items at our outlet, or text us via WhatsApp to arrange a professional pickup.
           </p>
           <div className="flex justify-center gap-4">

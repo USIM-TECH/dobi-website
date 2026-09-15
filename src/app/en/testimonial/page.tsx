@@ -75,11 +75,11 @@ export default function TestimonialsPage() {
       {/* Hero */}
       <section className="bg-gradient-to-r from-blue-50 to-white pt-36 pb-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <span className="text-primary font-bold text-base tracking-widest uppercase">Testimonials</span>
+          <span className="text-primary font-bold text-lg tracking-widest uppercase">Testimonials</span>
           <h1 className="text-4xl md:text-5xl font-extrabold text-dark-blue mt-2 mb-6">
             Hear From Our Happy Customers
           </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto text-base leading-relaxed">
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
             Read real feedback from our verified Google Maps reviews and valued customers about our quality standards, convenience, and garment care.
           </p>
         </div>
@@ -100,7 +100,7 @@ export default function TestimonialsPage() {
                     <Star key={sIdx} className="w-5 h-5 fill-primary text-primary" />
                   ))}
                 </div>
-                <p className="text-gray-600 text-base leading-relaxed italic">
+                <p className="text-gray-600 text-lg leading-relaxed italic">
                   &quot;{rev.text}&quot;
                 </p>
               </div>
@@ -114,7 +114,7 @@ export default function TestimonialsPage() {
                   {rev.name.charAt(0).toUpperCase()}
                 </div>
                 <div className="text-left">
-                  <h4 className="font-extrabold text-dark-blue text-base leading-none">{rev.name}</h4>
+                  <h4 className="font-extrabold text-dark-blue text-lg leading-none">{rev.name}</h4>
                   <span className="text-[10px] font-semibold text-gray-400 block mt-1">
                     Verified Reviewer{rev.note ? ` · ${rev.note}` : ""}
                   </span>
@@ -130,7 +130,7 @@ export default function TestimonialsPage() {
         <div className="max-w-2xl mx-auto px-6 space-y-4">
           <MessageSquare className="w-10 h-10 text-primary mx-auto mb-2" />
           <h3 className="text-xl font-bold text-dark-blue">Are You a Satisfied Customer?</h3>
-          <p className="text-gray-500 text-base leading-relaxed">
+          <p className="text-gray-500 text-lg leading-relaxed">
             Your reviews help us grow and help other customers find premium laundry solutions. Please consider leaving us a review on Google Maps.
           </p>
         </div>

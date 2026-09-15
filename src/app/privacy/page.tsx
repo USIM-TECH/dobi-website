@@ -16,19 +16,19 @@ export default function PrivacyPolicyPage() {
       {/* Hero */}
       <section className="bg-gradient-to-r from-blue-50 to-white pt-36 pb-16 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <span className="text-primary font-bold text-base tracking-widest uppercase">
+          <span className="text-primary font-bold text-lg tracking-widest uppercase">
             Legal
           </span>
           <h1 className="text-4xl md:text-5xl font-extrabold text-dark-blue mt-2 mb-4">
             Privacy Policy
           </h1>
-          <p className="text-gray-500 text-base">Last updated: September 10, 2026</p>
+          <p className="text-gray-500 text-lg">Last updated: September 10, 2026</p>
         </div>
       </section>
 
       {/* Content */}
       <section className="py-16 max-w-4xl mx-auto px-6 w-full">
-        <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 md:p-12 space-y-10 text-gray-600 text-base leading-relaxed">
+        <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 md:p-12 space-y-10 text-gray-600 text-lg leading-relaxed">
           <p>
             Dobi Akasia (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) respects your privacy and is
             committed to protecting the personal data you share with us when

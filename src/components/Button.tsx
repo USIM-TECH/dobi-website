@@ -25,7 +25,7 @@ export default function Button({
   rel,
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-between gap-3 px-6 py-3.5 rounded-full font-bold text-base transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none cursor-pointer select-none active:scale-[0.98] group";
+    "inline-flex items-center justify-between gap-3 px-6 py-3.5 rounded-full font-bold text-lg transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none cursor-pointer select-none active:scale-[0.98] group";
 
   const variants = {
     primary: "bg-[#1d6ff0] text-white hover:bg-[#1255cc] shadow-[#1d6ff0]/20 hover:shadow-[#1d6ff0]/30",

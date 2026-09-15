@@ -72,7 +72,7 @@ export default function BeforeAfter({
           alt={afterAlt}
           className="w-full h-full object-cover pointer-events-none"
         />
-        <div className="absolute bottom-4 right-4 bg-lime text-white text-sm font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm z-10">
+        <div className="absolute bottom-4 right-4 bg-lime text-white text-base font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm z-10">
           After
         </div>
       </div>
@@ -91,7 +91,7 @@ export default function BeforeAfter({
             style={{ width: containerRef.current?.getBoundingClientRect().width || "100%", maxWidth: "none" }}
           />
         </div>
-        <div className="absolute bottom-4 left-4 bg-primary text-white text-sm font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm z-10">
+        <div className="absolute bottom-4 left-4 bg-primary text-white text-base font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm z-10">
           Before
         </div>
       </div>

@@ -61,7 +61,7 @@ export default function TrainingPage() {
       <section className="bg-gradient-to-r from-blue-50 to-white pt-36 pb-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           <div className="space-y-6">
-            <span className="text-primary font-bold text-base tracking-widest uppercase">Academy & Training</span>
+            <span className="text-primary font-bold text-lg tracking-widest uppercase">Academy & Training</span>
             <h1 className="text-4xl md:text-5xl font-extrabold text-dark-blue leading-tight">
               Professional Laundry Training Program
             </h1>
@@ -92,11 +92,11 @@ export default function TrainingPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="text-primary font-bold text-base tracking-widest uppercase">Highlights</span>
+            <span className="text-primary font-bold text-lg tracking-widest uppercase">Highlights</span>
             <h2 className="text-3xl font-extrabold text-dark-blue mt-2">
               Learn From Industry Experts
             </h2>
-            <p className="text-gray-500 text-base mt-2">
+            <p className="text-gray-500 text-lg mt-2">
               Upskill yourself or your laundry staff with hands-on practice.
             </p>
           </div>
@@ -113,7 +113,7 @@ export default function TrainingPage() {
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="text-lg font-bold text-dark-blue mb-3">{h.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{h.desc}</p>
+                  <p className="text-gray-500 text-base leading-relaxed">{h.desc}</p>
                 </div>
               );
             })}
@@ -125,11 +125,11 @@ export default function TrainingPage() {
       <section className="py-20 bg-soft-bg border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="text-primary font-bold text-base tracking-widest uppercase">Programs</span>
+            <span className="text-primary font-bold text-lg tracking-widest uppercase">Programs</span>
             <h2 className="text-3xl font-extrabold text-dark-blue mt-2">
               Select Your Learning Pathway
             </h2>
-            <p className="text-gray-500 text-base mt-2">
+            <p className="text-gray-500 text-lg mt-2">
               Choose from intensive 1-day masterclasses or comprehensive 5-day certificate programs.
             </p>
           </div>
@@ -138,18 +138,18 @@ export default function TrainingPage() {
             {/* Card 1 */}
             <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
               <div className="space-y-4">
-                <span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full uppercase">1-Day Masterclass</span>
+                <span className="text-base font-bold text-primary bg-primary/10 px-3 py-1 rounded-full uppercase">1-Day Masterclass</span>
                 <h3 className="text-xl font-bold text-dark-blue">Garment Inspection & Tagging</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-base leading-relaxed">
                   Focused learning path covering fiber types, stain inspection, garment check protocols, and tagging. Ideal for laundry attendants.
                 </p>
-                <div className="pt-2 text-2xl font-extrabold text-primary">RM 800 <span className="text-sm text-gray-400 font-semibold">/ pax</span></div>
+                <div className="pt-2 text-2xl font-extrabold text-primary">RM 800 <span className="text-base text-gray-400 font-semibold">/ pax</span></div>
                 <div className="border-t border-gray-100 pt-4 space-y-2">
-                  <div className="flex gap-2 items-center text-sm text-gray-500">
+                  <div className="flex gap-2 items-center text-base text-gray-500">
                     <CheckCircle className="w-4 h-4 text-lime" />
                     <span>100% HRD Corp claimable</span>
                   </div>
-                  <div className="flex gap-2 items-center text-sm text-gray-500">
+                  <div className="flex gap-2 items-center text-base text-gray-500">
                     <CheckCircle className="w-4 h-4 text-lime" />
                     <span>Includes training manual & material</span>
                   </div>
@@ -165,18 +165,18 @@ export default function TrainingPage() {
             {/* Card 2 */}
             <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
               <div className="space-y-4">
-                <span className="text-sm font-bold text-lime bg-lime/10 px-3 py-1 rounded-full uppercase">5-Day Professional Program</span>
+                <span className="text-base font-bold text-lime bg-lime/10 px-3 py-1 rounded-full uppercase">5-Day Professional Program</span>
                 <h3 className="text-xl font-bold text-dark-blue">Laundry & Dry Cleaning Operations</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-base leading-relaxed">
                   Comprehensive training covering dry cleaning solvents, washing cycles, stain removal chemistry, steam ironing, folding, packing, and shop floor management.
                 </p>
-                <div className="pt-2 text-2xl font-extrabold text-lime">RM 3,680 <span className="text-sm text-gray-400 font-semibold">/ pax</span></div>
+                <div className="pt-2 text-2xl font-extrabold text-lime">RM 3,680 <span className="text-base text-gray-400 font-semibold">/ pax</span></div>
                 <div className="border-t border-gray-100 pt-4 space-y-2">
-                  <div className="flex gap-2 items-center text-sm text-gray-500">
+                  <div className="flex gap-2 items-center text-base text-gray-500">
                     <CheckCircle className="w-4 h-4 text-lime" />
                     <span>100% HRD Corp claimable</span>
                   </div>
-                  <div className="flex gap-2 items-center text-sm text-gray-500">
+                  <div className="flex gap-2 items-center text-base text-gray-500">
                     <CheckCircle className="w-4 h-4 text-lime" />
                     <span>Hands-on practice on heavy machines</span>
                   </div>
@@ -200,7 +200,7 @@ export default function TrainingPage() {
             <h2 className="text-3xl font-extrabold text-dark-blue">
               Training Academy FAQ
             </h2>
-            <p className="text-gray-500 text-base mt-2">
+            <p className="text-gray-500 text-lg mt-2">
               Common questions answered about registration, certificates, and venues.
             </p>
           </div>

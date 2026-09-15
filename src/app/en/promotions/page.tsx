@@ -35,11 +35,11 @@ export default function PromotionsPage() {
       {/* Hero */}
       <section className="bg-gradient-to-r from-blue-50 to-white pt-36 pb-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <span className="text-primary font-bold text-base tracking-widest uppercase">Promotions</span>
+          <span className="text-primary font-bold text-lg tracking-widest uppercase">Promotions</span>
           <h1 className="text-4xl md:text-5xl font-extrabold text-dark-blue mt-2 mb-6">
             Enjoy Exceptional Services at Combo Prices
           </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto text-base leading-relaxed">
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
             Discover our bundle packages and seasonal savings that help you reduce laundry costs by up to 51% while maintaining premium quality.
           </p>
         </div>
@@ -66,14 +66,14 @@ export default function PromotionsPage() {
 
                 <div className="space-y-2">
                   <h3 className="text-2xl font-extrabold text-dark-blue">{promo.title}</h3>
-                  <p className="text-gray-600 text-base leading-relaxed">{promo.desc}</p>
+                  <p className="text-gray-600 text-lg leading-relaxed">{promo.desc}</p>
                 </div>
 
                 <div className="space-y-2 pt-2">
-                  <h4 className="font-bold text-dark-blue text-sm uppercase tracking-wider">Promotion Terms:</h4>
+                  <h4 className="font-bold text-dark-blue text-base uppercase tracking-wider">Promotion Terms:</h4>
                   <ul className="space-y-1.5">
                     {promo.terms.map((t, tIdx) => (
-                      <li key={tIdx} className="flex gap-2 items-start text-sm text-gray-500">
+                      <li key={tIdx} className="flex gap-2 items-start text-base text-gray-500">
                         <span className={`mt-0.5 font-bold ${promo.iconColor}`}>•</span>
                         <span>{t}</span>
                       </li>
@@ -97,7 +97,7 @@ export default function PromotionsPage() {
         <div className="max-w-7xl mx-auto px-6 text-center max-w-4xl">
           <ShieldCheck className="w-12 h-12 text-primary mx-auto mb-4" />
           <h3 className="text-xl font-bold text-dark-blue mb-2">Our Quality Commitment</h3>
-          <p className="text-gray-500 text-base leading-relaxed">
+          <p className="text-gray-500 text-lg leading-relaxed">
             Even at discounted combo rates, every item is processed under our standard operational procedures, ensuring deep fabric cleaning, careful hand finishing, and strict quality checks.
           </p>
         </div>

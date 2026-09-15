@@ -46,7 +46,7 @@ export default function ExceptionalServicePage() {
       {/* Hero */}
       <section className="bg-gradient-to-r from-blue-50 to-white pt-36 pb-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 text-center max-w-4xl">
-          <span className="text-primary font-bold text-base tracking-widest uppercase">Core Values</span>
+          <span className="text-primary font-bold text-lg tracking-widest uppercase">Core Values</span>
           <h1 className="text-4xl md:text-5xl font-extrabold text-dark-blue mt-2 mb-6">
             Delivering The Difference In Service Excellence
           </h1>
@@ -71,7 +71,7 @@ export default function ExceptionalServicePage() {
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-extrabold text-dark-blue">{std.title}</h3>
-                  <p className="text-gray-600 text-base leading-relaxed">{std.desc}</p>
+                  <p className="text-gray-600 text-lg leading-relaxed">{std.desc}</p>
                 </div>
               </div>
             );
@@ -83,7 +83,7 @@ export default function ExceptionalServicePage() {
       <section className="py-20 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="text-primary font-bold text-base tracking-widest uppercase font-semibold">Values</span>
+            <span className="text-primary font-bold text-lg tracking-widest uppercase font-semibold">Values</span>
             <h2 className="text-3xl font-extrabold text-dark-blue mt-2">
               Explore Our Other Core Values
             </h2>
@@ -94,12 +94,12 @@ export default function ExceptionalServicePage() {
             <div className="bg-soft-bg p-8 rounded-3xl border border-gray-100 flex flex-col justify-between shadow-sm hover:border-primary transition-colors">
               <div>
                 <h3 className="text-lg font-bold text-dark-blue mb-2">Unwavering Quality</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
+                <p className="text-gray-500 text-base leading-relaxed">
                   Discover how we ingrain quality into our laundry service. You can trust that your garments are in the best hands, receiving the highest level of cleaning care and quality check prior to delivery.
                 </p>
               </div>
               <div className="pt-6">
-                <Link href="/en/#core-values" className="text-sm font-bold text-primary flex items-center gap-1 hover:underline">
+                <Link href="/en/#core-values" className="text-base font-bold text-primary flex items-center gap-1 hover:underline">
                   Read Quality Details
                   <ChevronRight className="w-3.5 h-3.5" />
                 </Link>
@@ -110,12 +110,12 @@ export default function ExceptionalServicePage() {
             <div className="bg-soft-bg p-8 rounded-3xl border border-gray-100 flex flex-col justify-between shadow-sm hover:border-primary transition-colors">
               <div>
                 <h3 className="text-lg font-bold text-dark-blue mb-2">Ultimate Convenience</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
+                <p className="text-gray-500 text-base leading-relaxed">
                   Learn how we make life a little bit easier for our customers. Whether tracking your order, dropping off, or collecting your clothes, our commitment to convenience ensures a seamless workflow.
                 </p>
               </div>
               <div className="pt-6">
-                <Link href="/en/#core-values" className="text-sm font-bold text-primary flex items-center gap-1 hover:underline">
+                <Link href="/en/#core-values" className="text-base font-bold text-primary flex items-center gap-1 hover:underline">
                   Read Convenience Details
                   <ChevronRight className="w-3.5 h-3.5" />
                 </Link>
@@ -131,7 +131,7 @@ export default function ExceptionalServicePage() {
           <h2 className="text-3xl md:text-4xl font-extrabold">
             Enjoy Better Service While Saving More
           </h2>
-          <p className="text-lime-50 max-w-xl mx-auto text-base leading-relaxed">
+          <p className="text-lime-50 max-w-xl mx-auto text-lg leading-relaxed">
             Enjoy significant cost savings of up to 51% while enjoying the best service. Different laundry combo packages are available for your specific needs.
           </p>
           <div className="flex justify-center gap-4">

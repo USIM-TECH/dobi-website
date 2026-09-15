@@ -23,11 +23,11 @@ export default function OutletPage() {
       {/* Hero Header */}
       <section className="bg-gradient-to-r from-blue-50 to-white pt-36 pb-16 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <span className="text-primary font-bold text-base tracking-widest uppercase">Service Locator</span>
+          <span className="text-primary font-bold text-lg tracking-widest uppercase">Service Locator</span>
           <h1 className="text-4xl md:text-5xl font-extrabold text-dark-blue mt-2 mb-4">
             Visit Our Outlet
           </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto text-base leading-relaxed">
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
             We currently operate from a single outlet in Nilai, Negeri Sembilan, offering our full range of professional laundry, dry cleaning, and fabric care services.
           </p>
         </div>
@@ -57,7 +57,7 @@ export default function OutletPage() {
               {location.name}
             </h3>
 
-            <div className="space-y-3 pt-2 text-base text-gray-600">
+            <div className="space-y-3 pt-2 text-lg text-gray-600">
               <div className="flex gap-3 items-start">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <p className="leading-relaxed">{location.address}</p>
@@ -88,7 +88,7 @@ export default function OutletPage() {
               href={GOOGLE_MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 bg-gray-50 border border-gray-150 py-3 rounded-xl font-bold text-sm text-dark-blue hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
+              className="w-full flex items-center justify-center gap-2 bg-gray-50 border border-gray-150 py-3 rounded-xl font-bold text-base text-dark-blue hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
             >
               <Map className="w-4 h-4" />
               Get Google Maps Directions

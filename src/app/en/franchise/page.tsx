@@ -56,7 +56,7 @@ export default function FranchisePage() {
       <section className="bg-gradient-to-r from-blue-50 to-white pt-36 pb-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           <div className="space-y-6">
-            <span className="text-primary font-bold text-base tracking-widest uppercase">Franchise Program</span>
+            <span className="text-primary font-bold text-lg tracking-widest uppercase">Franchise Program</span>
             <h1 className="text-4xl md:text-5xl font-extrabold text-dark-blue leading-tight">
               Tech-Driven Laundry Franchise in Malaysia
             </h1>
@@ -70,7 +70,7 @@ export default function FranchisePage() {
               <a
                 href="/brochure.pdf"
                 download
-                className="inline-flex items-center gap-2 border border-gray-250 hover:border-primary text-dark-blue hover:text-primary font-bold text-base px-6 py-3 rounded-full bg-white transition-all shadow-sm cursor-pointer"
+                className="inline-flex items-center gap-2 border border-gray-250 hover:border-primary text-dark-blue hover:text-primary font-bold text-lg px-6 py-3 rounded-full bg-white transition-all shadow-sm cursor-pointer"
               >
                 <Download className="w-4 h-4" />
                 Download Brochure
@@ -95,11 +95,11 @@ export default function FranchisePage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="text-primary font-bold text-base tracking-widest uppercase">Franchise Benefits</span>
+            <span className="text-primary font-bold text-lg tracking-widest uppercase">Franchise Benefits</span>
             <h2 className="text-3xl font-extrabold text-dark-blue mt-2">
               Why Invest In A Dobi Akasia Franchise?
             </h2>
-            <p className="text-gray-500 text-base mt-2">
+            <p className="text-gray-500 text-lg mt-2">
               We provide a complete turnkey business blueprint with extensive support mechanisms.
             </p>
           </div>
@@ -116,7 +116,7 @@ export default function FranchisePage() {
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="text-lg font-bold text-dark-blue mb-3">{b.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{b.desc}</p>
+                  <p className="text-gray-500 text-base leading-relaxed">{b.desc}</p>
                 </div>
               );
             })}
@@ -130,7 +130,7 @@ export default function FranchisePage() {
           <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 space-y-8">
             <div className="text-center max-w-lg mx-auto">
               <h2 className="text-3xl font-extrabold text-dark-blue">Franchise Inquiry Form</h2>
-              <p className="text-gray-500 text-base mt-2">
+              <p className="text-gray-500 text-lg mt-2">
                 Begin your journey as a Dobi Akasia franchisee. Please fill out details and our business development representative will touch base.
               </p>
             </div>
@@ -139,7 +139,7 @@ export default function FranchisePage() {
               <div className="p-8 text-center bg-lime/10 border border-lime/20 rounded-2xl space-y-4">
                 <Check className="w-12 h-12 text-lime mx-auto" />
                 <h3 className="font-bold text-dark-blue text-xl">Application Received!</h3>
-                <p className="text-gray-600 text-base">
+                <p className="text-gray-600 text-lg">
                   Thank you for applying. A franchise manager will review your profile and reach out via email or phone within 48 business hours.
                 </p>
               </div>
@@ -147,29 +147,29 @@ export default function FranchisePage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-1">
-                    <label className="text-sm font-bold text-dark-blue block">Full Name</label>
-                    <input type="text" required placeholder="e.g. Michael Tan" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                    <label className="text-base font-bold text-dark-blue block">Full Name</label>
+                    <input type="text" required placeholder="e.g. Michael Tan" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-lg focus:outline-none focus:border-primary" />
                   </div>
                   <div className="space-y-1">
-                    <label className="text-sm font-bold text-dark-blue block">Contact Phone Number</label>
-                    <input type="tel" required placeholder="e.g. 017-1234567" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                    <label className="text-base font-bold text-dark-blue block">Contact Phone Number</label>
+                    <input type="tel" required placeholder="e.g. 017-1234567" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-lg focus:outline-none focus:border-primary" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-1">
-                    <label className="text-sm font-bold text-dark-blue block">Email Address</label>
-                    <input type="email" required placeholder="michael@gmail.com" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                    <label className="text-base font-bold text-dark-blue block">Email Address</label>
+                    <input type="email" required placeholder="michael@gmail.com" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-lg focus:outline-none focus:border-primary" />
                   </div>
                   <div className="space-y-1">
-                    <label className="text-sm font-bold text-dark-blue block">Proposed Outlet Location</label>
-                    <input type="text" required placeholder="e.g. Puchong, Selangor" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                    <label className="text-base font-bold text-dark-blue block">Proposed Outlet Location</label>
+                    <input type="text" required placeholder="e.g. Puchong, Selangor" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-lg focus:outline-none focus:border-primary" />
                   </div>
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-sm font-bold text-dark-blue block">Available Investment Capital</label>
-                  <select className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary">
+                  <label className="text-base font-bold text-dark-blue block">Available Investment Capital</label>
+                  <select className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-lg focus:outline-none focus:border-primary">
                     <option>RM 50,000 - RM 100,000</option>
                     <option>RM 100,000 - RM 150,000</option>
                     <option>RM 150,000 - RM 250,000</option>
@@ -178,11 +178,11 @@ export default function FranchisePage() {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-sm font-bold text-dark-blue block">Business Background & Message</label>
-                  <textarea rows={4} placeholder="Tell us briefly about your business experience..." className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-primary" />
+                  <label className="text-base font-bold text-dark-blue block">Business Background & Message</label>
+                  <textarea rows={4} placeholder="Tell us briefly about your business experience..." className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-lg focus:outline-none focus:border-primary" />
                 </div>
 
-                <button type="submit" className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3.5 rounded-xl shadow-md transition-colors cursor-pointer text-base">
+                <button type="submit" className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3.5 rounded-xl shadow-md transition-colors cursor-pointer text-lg">
                   Submit Franchise Application
                 </button>
               </form>
@@ -199,7 +199,7 @@ export default function FranchisePage() {
             <h2 className="text-3xl font-extrabold text-dark-blue">
               Franchise FAQ
             </h2>
-            <p className="text-gray-500 text-base mt-2">
+            <p className="text-gray-500 text-lg mt-2">
               Common inquiries from our prospective business partners.
             </p>
           </div>
