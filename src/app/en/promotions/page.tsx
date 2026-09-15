@@ -19,8 +19,8 @@ export default function PromotionsPage() {
     },
     {
       title: "Bedding Cleaning Combos",
-      desc: "Perfect timing to refresh your bedroom. Bring in your comforters, blankets, pillows, and mattress protectors. Standard price starts from RM30/pc.",
-      terms: ["Comforter/Blanket/Pillow: RM30/pc", "Mattress Protector: RM20/kg", "Get combo rates when washing multiple items"],
+      desc: "Perfect timing to refresh your bedroom. Bring in your comforters, blankets, pillows, and mattress protectors.",
+      terms: ["Covers comforters, blankets, pillows, and mattress protectors", "Combo rates apply when washing multiple items together"],
       badge: "Bedding Combo",
       color: "border-lime",
       iconColor: "text-lime",

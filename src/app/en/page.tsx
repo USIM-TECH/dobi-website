@@ -349,12 +349,12 @@ export default function EnglishHomePage() {
                 highly experienced staff.
               </p>
               <p>
-                Our business is engineered to support both large-scale
-                commercial clients and premium retail requirements, offering
-                custom bulk contracts that prioritize prompt turnaround times,
-                hygienic outcomes, and competitive cost efficiency. As a trusted
-                partner for regional institutions, we understand the logistical
+                As a trusted partner for regional institutions and the
+                hospitality industry, we understand the logistical
                 requirements of institutional hygiene and linen maintenance.
+                Our dobi currently provides professional washing and linen
+                care services for hotels, ensuring high standards of
+                cleanliness, hygiene, and consistent service quality.
               </p>
             </div>
 
@@ -371,7 +371,7 @@ export default function EnglishHomePage() {
                 {
                   icon: Zap,
                   title: "Modern Tech",
-                  text: "European cleaning systems protecting fabrics.",
+                  text: "Modern Cleaning Systems Designed to Protect Fabrics.",
                   bg: "bg-sky-50/50",
                   textCol: "text-sky-600",
                 },
