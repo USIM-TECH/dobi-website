@@ -425,6 +425,9 @@ export default function EnglishHomePage() {
             <Users className="w-10 h-10" />
             <p className="text-base font-semibold">Team photo coming soon</p>
           </div>
+          <p className="text-gray-500 text-sm max-w-2xl mx-auto leading-relaxed italic">
+            The team behind Dobi Akasia — combining technical expertise, operational precision, and hands-on care to deliver consistent laundry and linen solutions.
+          </p>
         </div>
       </section>
 
