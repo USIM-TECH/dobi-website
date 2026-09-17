@@ -159,31 +159,31 @@ export default function EnglishHomePage() {
       name: "Nursyazwani Azalan",
       text: "Really happy with the service here! The place is clean and comfortable. My clothes were clean and smelled fresh. Highly recommended!",
       stars: 5,
-      role: "Verified Google Reviewer",
+      role: "Customer",
     },
     {
       name: "Siva Perumal",
       text: "My experience was extremely positive. From the moment I entered the facility, I was impressed by how clean, organised, and welcoming the environment was. The staff members were friendly, respectful, and very helpful throughout my visit.",
       stars: 5,
-      role: "Verified Google Reviewer",
+      role: "Customer",
     },
     {
       name: "thenmole moly",
       text: "Really impressed with Dobi Akasia! Clean and well-organised shop, good service and very convenient. The staff are friendly and helpful, and the overall experience was excellent.",
       stars: 5,
-      role: "Verified Google Reviewer",
+      role: "Customer",
     },
     {
       name: "shasha pillay",
       text: "Five-star service! Fast, friendly, and efficient. My clothes look pristine and smell amazing. Highly recommended!",
       stars: 5,
-      role: "Verified Google Reviewer",
+      role: "Customer",
     },
     {
       name: "Darshan",
       text: "Good service and a clean place. Overall, a good dobi shop with affordable prices.",
       stars: 5,
-      role: "Verified Google Reviewer",
+      role: "Customer",
     },
   ];
 
@@ -350,11 +350,11 @@ export default function EnglishHomePage() {
               </p>
               <p>
                 As a trusted partner for regional institutions and the
-                hospitality industry, we understand the logistical
-                requirements of institutional hygiene and linen maintenance.
-                Our dobi currently provides professional washing and linen
-                care services for hotels, ensuring high standards of
-                cleanliness, hygiene, and consistent service quality.
+                hospitality industry, we understand the logistical requirements
+                of institutional hygiene and linen maintenance. Our dobi
+                currently provides professional washing and linen care services
+                for hotels, ensuring high standards of cleanliness, hygiene, and
+                consistent service quality.
               </p>
             </div>
 
@@ -426,7 +426,9 @@ export default function EnglishHomePage() {
             <p className="text-base font-semibold">Team photo coming soon</p>
           </div>
           <p className="text-gray-500 text-sm max-w-2xl mx-auto leading-relaxed italic">
-            The team behind Dobi Akasia — combining technical expertise, operational precision, and hands-on care to deliver consistent laundry and linen solutions.
+            The team behind Dobi Akasia — combining technical expertise,
+            operational precision, and hands-on care to deliver consistent
+            laundry and linen solutions.
           </p>
         </div>
       </section>

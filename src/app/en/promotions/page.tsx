@@ -11,7 +11,7 @@ export default function PromotionsPage() {
     {
       title: "New Customer Walk-in Promo",
       desc: "First time trying Dobi Akasia? Enjoy special introductory rates on laundry and dry cleaning when you walk in to our outlet in Nilai, Negeri Sembilan.",
-      terms: ["Walk-in customers only", "Valid at our Nilai outlet only", "Cannot stack with other promos"],
+      terms: ["Walk-in customers only", "Cannot stack with other promos"],
       badge: "Save More",
       color: "border-primary",
       iconColor: "text-primary",
@@ -20,7 +20,10 @@ export default function PromotionsPage() {
     {
       title: "Bedding Cleaning Combos",
       desc: "Perfect timing to refresh your bedroom. Bring in your comforters, blankets, pillows, and mattress protectors.",
-      terms: ["Covers comforters, blankets, pillows, and mattress protectors", "Combo rates apply when washing multiple items together"],
+      terms: [
+        "Covers comforters, blankets, pillows, and mattress protectors",
+        "Combo rates apply when washing multiple items together",
+      ],
       badge: "Bedding Combo",
       color: "border-lime",
       iconColor: "text-lime",
@@ -35,12 +38,15 @@ export default function PromotionsPage() {
       {/* Hero */}
       <section className="bg-gradient-to-r from-blue-50 to-white pt-36 pb-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <span className="text-primary font-bold text-lg tracking-widest uppercase">Promotions</span>
+          <span className="text-primary font-bold text-lg tracking-widest uppercase">
+            Promotions
+          </span>
           <h1 className="text-4xl md:text-5xl font-extrabold text-dark-blue mt-2 mb-6">
             Enjoy Exceptional Services at Combo Prices
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
-            Discover our bundle packages and seasonal savings that help you reduce laundry costs by up to 51% while maintaining premium quality.
+            Discover our bundle packages and seasonal savings that help you
+            reduce laundry costs while maintaining premium quality.
           </p>
         </div>
       </section>
@@ -54,27 +60,42 @@ export default function PromotionsPage() {
               className={`bg-white border-2 ${promo.color} rounded-3xl p-8 shadow-md flex flex-col justify-between hover:shadow-xl transition-all duration-300 relative overflow-hidden`}
             >
               {/* Decorative background shape */}
-              <div className={`absolute top-0 right-0 w-24 h-24 ${promo.bgLight} rounded-bl-full -z-10`} />
+              <div
+                className={`absolute top-0 right-0 w-24 h-24 ${promo.bgLight} rounded-bl-full -z-10`}
+              />
 
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
-                  <span className={`text-[10px] font-extrabold uppercase tracking-widest px-3.5 py-1 rounded-full ${promo.bgLight} ${promo.iconColor}`}>
+                  <span
+                    className={`text-[10px] font-extrabold uppercase tracking-widest px-3.5 py-1 rounded-full ${promo.bgLight} ${promo.iconColor}`}
+                  >
                     {promo.badge}
                   </span>
                   <Tag className={`w-5 h-5 ${promo.iconColor}`} />
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-extrabold text-dark-blue">{promo.title}</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">{promo.desc}</p>
+                  <h3 className="text-2xl font-extrabold text-dark-blue">
+                    {promo.title}
+                  </h3>
+                  <p className="text-gray-600 text-lg leading-relaxed">
+                    {promo.desc}
+                  </p>
                 </div>
 
                 <div className="space-y-2 pt-2">
-                  <h4 className="font-bold text-dark-blue text-base uppercase tracking-wider">Promotion Terms:</h4>
+                  <h4 className="font-bold text-dark-blue text-base uppercase tracking-wider">
+                    Promotion Terms:
+                  </h4>
                   <ul className="space-y-1.5">
                     {promo.terms.map((t, tIdx) => (
-                      <li key={tIdx} className="flex gap-2 items-start text-base text-gray-500">
-                        <span className={`mt-0.5 font-bold ${promo.iconColor}`}>•</span>
+                      <li
+                        key={tIdx}
+                        className="flex gap-2 items-start text-base text-gray-500"
+                      >
+                        <span className={`mt-0.5 font-bold ${promo.iconColor}`}>
+                          •
+                        </span>
                         <span>{t}</span>
                       </li>
                     ))}
@@ -83,7 +104,13 @@ export default function PromotionsPage() {
               </div>
 
               <div className="pt-8 flex gap-4">
-                <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="primary" className="flex-grow justify-center">
+                <Button
+                  href="https://wa.me/601131404946"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="primary"
+                  className="flex-grow justify-center"
+                >
                   Claim Promotion
                 </Button>
               </div>
@@ -96,9 +123,13 @@ export default function PromotionsPage() {
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 text-center max-w-4xl">
           <ShieldCheck className="w-12 h-12 text-primary mx-auto mb-4" />
-          <h3 className="text-xl font-bold text-dark-blue mb-2">Our Quality Commitment</h3>
+          <h3 className="text-xl font-bold text-dark-blue mb-2">
+            Our Quality Commitment
+          </h3>
           <p className="text-gray-500 text-lg leading-relaxed">
-            Even at discounted combo rates, every item is processed under our standard operational procedures, ensuring deep fabric cleaning, careful hand finishing, and strict quality checks.
+            Even at discounted combo rates, every item is processed under our
+            standard operational procedures, ensuring deep fabric cleaning,
+            careful hand finishing, and strict quality checks.
           </p>
         </div>
       </section>

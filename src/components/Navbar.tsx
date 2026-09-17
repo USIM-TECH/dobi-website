@@ -127,7 +127,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-3">
           {/* Logo */}
           <Link href="/en" className="flex min-w-0 items-center gap-3 group">
-            <span className="font-extrabold text-2xl tracking-tight text-[#152956] group-hover:opacity-90 transition-opacity">
+            <span className="font-extrabold text-3xl tracking-tight text-[#152956] group-hover:opacity-90 transition-opacity">
               Dobi<span className="text-[#1d6ff0]">Akasia</span>
             </span>
           </Link>
