@@ -8,24 +8,29 @@ import FaqAccordion from "@/components/FaqAccordion";
 
 export default function FlatWorkIronerPage() {
   const title = "Flat Work Ironer Service (3-Roller)";
-  const intro = "Industrial 3-roller flatwork ironer for bedsheets, tablecloths, curtains, and other large flat linens — pressed smooth and crease-free in a single continuous pass. Ideal for bulk and B2B orders.";
+  const intro =
+    "Industrial 3-roller flatwork ironer for bedsheets, tablecloths, curtains, and other large flat linens — pressed smooth and crease-free in a single continuous pass. Ideal for bulk and B2B orders.";
 
   const faqs: { question: string; answer: string }[] = [
     {
       question: "What items can go through the flatwork ironer?",
-      answer: "Bedsheets, tablecloths, curtains, pillowcases, and other large flat linens without buttons or zippers.",
+      answer:
+        "Bedsheets, tablecloths, curtains, pillowcases, and other large flat linens without buttons or zippers.",
     },
     {
       question: "Do you offer this for bulk or business orders?",
-      answer: "Yes, this service is ideal for hotels, restaurants, and institutions with large volumes of flat linen. Contact us for a bulk quote.",
+      answer:
+        "Yes, this service is ideal for hotels, restaurants, and institutions with large volumes of flat linen. Contact us for a bulk quote.",
     },
     {
       question: "How is this different from your regular Ironing service?",
-      answer: "The flatwork ironer presses large flat linens through heated rollers, while our regular Ironing service uses hand pressing for shirts, pants, and garments with buttons or zippers.",
+      answer:
+        "The flatwork ironer presses large flat linens through heated rollers, while our regular Ironing service uses hand pressing for shirts, pants, and garments with buttons or zippers.",
     },
     {
       question: "What's the turnaround time for flatwork ironing?",
-      answer: "Standard turnaround is 2 to 4 working days depending on order volume; bulk B2B orders can be scheduled to your SLA.",
+      answer:
+        "Standard turnaround is 2 to 4 working days depending on order volume; bulk B2B orders can be scheduled to your SLA.",
     },
   ];
 
@@ -73,18 +78,26 @@ export default function FlatWorkIronerPage() {
               <span className="text-lg font-semibold text-gray-600 bg-gray-100/80 border border-gray-200/60 px-4 py-2 rounded-full">
                 Bulk & B2B Friendly
               </span>
-              <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="lime">
+              <Button
+                href="https://wa.me/601131404946"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="lime"
+              >
                 Request a Quote
               </Button>
             </div>
           </div>
 
-          <div className="hidden lg:block relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl bg-gray-50 border border-gray-100">
-            <img
-              src="/assets/flat-work-ironer.jpg"
-              alt="Flatwork ironer pressing a bedsheet"
-              className="w-full h-full object-cover"
-            />
+          <div className="hidden lg:block relative aspect-[4/3]">
+            <div className="absolute inset-0 bg-gradient-to-tr from-teal-100 to-sky-50 rounded-[32px] transform translate-x-3 translate-y-3 -z-10" />
+            <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-xl bg-white border border-gray-100 p-8 flex items-center justify-center">
+              <img
+                src="/assets/flat-work-ironer-service.jpeg"
+                alt="Industrial flatwork ironer machine"
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -100,18 +113,24 @@ export default function FlatWorkIronerPage() {
               How We Process Your Linens
             </h2>
             <p className="text-gray-500 text-lg mt-2">
-              Our professional cleaning facility operates under strict hygienic standards and procedures.
+              Our professional cleaning facility operates under strict hygienic
+              standards and procedures.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
             {steps.map((step, index) => (
-              <div key={index} className="bg-soft-bg p-6 rounded-3xl border border-gray-100 flex flex-col justify-between space-y-4 relative group hover:border-primary hover:shadow-md transition-all duration-300">
+              <div
+                key={index}
+                className="bg-soft-bg p-6 rounded-3xl border border-gray-100 flex flex-col justify-between space-y-4 relative group hover:border-primary hover:shadow-md transition-all duration-300"
+              >
                 <div>
                   <div className="text-4xl font-semibold text-gray-200 group-hover:text-primary transition-colors mb-3">
                     0{index + 1}
                   </div>
-                  <h3 className="font-extrabold text-dark-blue text-lg leading-snug mb-2">{step.title}</h3>
+                  <h3 className="font-extrabold text-dark-blue text-lg leading-snug mb-2">
+                    {step.title}
+                  </h3>
                   <p className="text-gray-500 text-base leading-relaxed">
                     {step.desc}
                   </p>
@@ -133,7 +152,8 @@ export default function FlatWorkIronerPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-gray-500 text-lg mt-2">
-              Have questions about our {title.replace(" (3-Roller)", "")}? Check out our helpful answers.
+              Have questions about our {title.replace(" (3-Roller)", "")}? Check
+              out our helpful answers.
             </p>
           </div>
 
@@ -148,10 +168,16 @@ export default function FlatWorkIronerPage() {
             Need Bulk Flatwork Ironing?
           </h2>
           <p className="text-blue-50 max-w-xl mx-auto text-lg leading-relaxed">
-            Drop off your linens at our outlet, or text us via WhatsApp to arrange a professional pickup and get a bulk quote.
+            Drop off your linens at our outlet, or text us via WhatsApp to
+            arrange a professional pickup and get a bulk quote.
           </p>
           <div className="flex justify-center gap-4">
-            <Button href="https://wa.me/601131404946" target="_blank" rel="noopener noreferrer" variant="white">
+            <Button
+              href="https://wa.me/601131404946"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="white"
+            >
               WhatsApp Us Now
             </Button>
             <Button href="/en/service-centres" variant="outline-white">
