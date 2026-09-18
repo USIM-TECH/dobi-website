@@ -407,7 +407,7 @@ export default function EnglishHomePage() {
         </div>
       </section>
 
-      {/* Meet Our Team */}
+      {/* Meet Our Team section - disabled until a real team photo is ready to display
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
           <span className="text-primary font-bold text-base tracking-widest uppercase">
@@ -432,6 +432,7 @@ export default function EnglishHomePage() {
           </p>
         </div>
       </section>
+      */}
 
       {/* 12 Services Catalog Grid with proper spacing */}
       <section
